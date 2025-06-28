@@ -39,8 +39,6 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="text-lg text-gray-500 mb-12 max-w-2xl mx-auto"
           >
-            Previously, I worked on algorithmic fairness as a research assistant at the Center for Responsible AI 
-            and conducted historical big data analysis on precolonial Ireland with faculty at NYU and UCL. 
             I enjoy building things that are both principled and practical.
           </motion.p>
 

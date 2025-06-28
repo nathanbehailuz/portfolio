@@ -68,11 +68,6 @@ const About = () => {
                 This work combines my interests in privacy, fairness, and practical machine learning systems.
               </p>
               
-              <p>
-                When I'm not coding or researching, you can find me exploring new technologies, 
-                contributing to open-source projects, or thinking about how AI can be used to 
-                solve real-world challenges while maintaining ethical standards.
-              </p>
             </div>
           </motion.div>
 
