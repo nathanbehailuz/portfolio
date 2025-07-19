@@ -1,9 +1,0 @@
-# Resume PDF Placeholder
-
-This is a placeholder file for your resume PDF. 
-
-To add your actual resume:
-1. Replace this file with your actual resume.pdf
-2. Or update the link in components/Contact.tsx to point to your resume URL
-
-The resume should be in PDF format and placed in the public/ directory. 
