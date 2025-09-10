@@ -1,0 +1,61 @@
+:root {
+    --primary-color: #4f46e5;
+    --accent-color: #06b6d4;
+    --highlight-color: #10b981;
+    --warning-color: #f59e0b;
+}
+
+body {
+    font-family: 'Roboto Mono', monospace;
+    background-color: #111111;
+    color: #E0E0E0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.light-mode {
+    background-color: #ffffff;
+    color: #1f2937;
+}
+
+body.light-mode .bg-\[#111111\] {
+    background-color: #ffffff;
+}
+
+body.light-mode #header {
+    background-color: #ffffff;
+}
+
+body.light-mode .text-\[#E0E0E0\] {
+    color: #1f2937;
+}
+
+body.light-mode .text-\[#A0A0A0\] {
+    color: #6b7280;
+}
+
+body.light-mode .text-white {
+    color: #1f2937;
+}
+
+body.light-mode .bg-gray-700 {
+    background-color: #e5e7eb;
+}
+
+body.light-mode .hover\:bg-gray-600:hover {
+    background-color: #d1d5db;
+}
+
+.project-item .details {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+}
+
+.project-item:hover .details,
+.project-item:focus-within .details {
+    max-height: 100px;
+}
+
+html {
+    scroll-padding-top: 6rem; /* Account for fixed header height */
+}
