@@ -49,4 +49,25 @@ document.addEventListener('DOMContentLoaded', function() {
         updateText();
         setInterval(updateText, 2000); // Change every 2 seconds
     }
+    
+    // Project icon click animations
+    const projectIcons = document.querySelectorAll('.project-icon');
+    
+    projectIcons.forEach(icon => {
+        icon.addEventListener('click', function() {
+            // Remove any existing animation class
+            this.classList.remove('animate');
+            
+            // Force reflow to ensure the class removal is processed
+            this.offsetHeight;
+            
+            // Add the animation class
+            this.classList.add('animate');
+            
+            // Remove the animation class after animation completes
+            setTimeout(() => {
+                this.classList.remove('animate');
+            }, 2000); // Match the longest animation duration
+        });
+    });
 });

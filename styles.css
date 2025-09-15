@@ -59,3 +59,62 @@ body.light-mode .hover\:bg-gray-600:hover {
 html {
     scroll-padding-top: 6rem; /* Account for fixed header height */
 }
+
+/* Project Icon Animations */
+.project-icon {
+    display: inline-block;
+    transition: all 0.3s ease;
+    font-size: 1.2em;
+}
+
+.project-icon:hover {
+    transform: scale(1.1);
+}
+
+/* AutoVert Car Animation */
+.autovert-icon.animate {
+    animation: driveCar 2s ease-in-out;
+}
+
+@keyframes driveCar {
+    0% { transform: translateX(-20px); }
+    50% { transform: translateX(20px); }
+    100% { transform: translateX(0); }
+}
+
+/* CliquePix Image Animation */
+.cliquepix-icon.animate {
+    animation: imageFlash 1.5s ease-in-out;
+}
+
+@keyframes imageFlash {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    25% { opacity: 0.7; transform: scale(1.1); }
+    50% { opacity: 0.5; transform: scale(1.2); }
+    75% { opacity: 0.7; transform: scale(1.1); }
+}
+
+/* Flappy Bird Game Animation */
+.flappybird-icon.animate {
+    animation: gameBounce 1.8s ease-in-out;
+}
+
+@keyframes gameBounce {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    25% { transform: translateY(-10px) rotate(-5deg); }
+    50% { transform: translateY(-15px) rotate(0deg); }
+    75% { transform: translateY(-10px) rotate(5deg); }
+}
+
+/* Insider Trading Chart Animation */
+.insider-icon.animate {
+    animation: chartGrow 2s ease-in-out;
+}
+
+@keyframes chartGrow {
+    0% { transform: scale(1) rotate(0deg); }
+    25% { transform: scale(1.1) rotate(2deg); }
+    50% { transform: scale(1.2) rotate(0deg); }
+    75% { transform: scale(1.1) rotate(-2deg); }
+    100% { transform: scale(1) rotate(0deg); }
+}
