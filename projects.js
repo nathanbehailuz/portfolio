@@ -54,18 +54,18 @@ document.addEventListener('DOMContentLoaded', function() {
         const card = document.createElement('div');
         card.className = 'project-card';
         
-        // Debug: Log project info
+        // Debug: Log project info (remove this in production)
         console.log(`Project: ${project.name}, Tags: ${JSON.stringify(project.tags)}, Has Web tag: ${project.tags.includes('Web')}`);
 
         // Get color for category based on primary tag
         const categoryColors = {
-            'Mobile': 'cyan',
-            'Web': 'emerald',
-            'ML': 'purple',
-            'Finance': 'pink'
+            'Mobile': { bg: 'bg-cyan-400/20', text: 'text-cyan-400' },
+            'Web': { bg: 'bg-emerald-400/20', text: 'text-emerald-400' },
+            'ML': { bg: 'bg-purple-400/20', text: 'text-purple-400' },
+            'Finance': { bg: 'bg-pink-400/20', text: 'text-pink-400' }
         };
         const primaryTag = project.tags[0]; // Use first tag for color
-        const borderColor = categoryColors[primaryTag] || 'emerald';
+        const colors = categoryColors[primaryTag] || categoryColors['Web'];
 
         card.innerHTML = `
             <div class="flex-1">
@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 </h3>
                 <p class="text-[#A0A0A0] mb-4 leading-relaxed text-sm">${project.description}</p>
                 <div class="project-tags mb-4">
-                    ${project.tools.map(tool => `<span class="project-tag bg-${borderColor}-400/20 text-${borderColor}-400">${tool}</span>`).join('')}
+                    ${project.tools.map(tool => `<span class="project-tag ${colors.bg} ${colors.text}">${tool}</span>`).join('')}
                 </div>
             </div>
             <div class="project-actions flex flex-col gap-3">
@@ -93,13 +93,15 @@ document.addEventListener('DOMContentLoaded', function() {
                     <span>Try It</span>
                 </a>
                 ` : ''}
-                <!-- Debug: Project tags are ${JSON.stringify(project.tags)} -->
             </div>
         `;
 
         // Add hover effect based on category
         card.addEventListener('mouseenter', () => {
-            card.style.borderColor = `rgb(var(--${borderColor}-400) / 0.5)`;
+            if (primaryTag === 'Mobile') card.style.borderColor = 'rgba(34, 211, 238, 0.5)'; // cyan
+            else if (primaryTag === 'Web') card.style.borderColor = 'rgba(16, 185, 129, 0.5)'; // emerald
+            else if (primaryTag === 'ML') card.style.borderColor = 'rgba(168, 85, 247, 0.5)'; // purple
+            else if (primaryTag === 'Finance') card.style.borderColor = 'rgba(236, 72, 153, 0.5)'; // pink
         });
 
         card.addEventListener('mouseleave', () => {

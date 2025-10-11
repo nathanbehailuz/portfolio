@@ -13,36 +13,36 @@ body {
 }
 
 body.light-mode {
-    background-color: #ffffff;
-    color: #1f2937;
+    background-color: #f8fafc;
+    color: #1e293b;
 }
 
 body.light-mode .bg-\[#111111\] {
-    background-color: #ffffff;
+    background-color: #f8fafc;
 }
 
 body.light-mode #header {
-    background-color: #ffffff;
+    background-color: #f8fafc;
 }
 
 body.light-mode .text-\[#E0E0E0\] {
-    color: #1f2937;
+    color: #1e293b;
 }
 
 body.light-mode .text-\[#A0A0A0\] {
-    color: #6b7280;
+    color: #64748b;
 }
 
 body.light-mode .text-white {
-    color: #1f2937;
+    color: #1e293b;
 }
 
 body.light-mode .bg-gray-700 {
-    background-color: #e5e7eb;
+    background-color: #e2e8f0;
 }
 
 body.light-mode .hover\:bg-gray-600:hover {
-    background-color: #d1d5db;
+    background-color: #cbd5e1;
 }
 
 body.light-mode .bg-gray-900\/50 {
@@ -70,22 +70,25 @@ body.light-mode .hover\:border-pink-400\/50:hover {
 }
 
 body.light-mode .filter-btn {
-    background-color: #f3f4f6;
-    color: #374151;
+    background-color: #e2e8f0;
+    color: #475569;
+    border-color: #cbd5e1;
 }
 
 body.light-mode .filter-btn:hover {
-    background-color: #e5e7eb;
+    background-color: #cbd5e1;
+    color: #334155;
 }
 
 body.light-mode .filter-btn.active {
     background-color: #10b981;
     color: white;
+    border-color: #10b981;
 }
 
 body.light-mode .project-card {
-    background-color: #f9fafb;
-    border-color: #e5e7eb;
+    background-color: transparent;
+    border-color: #cbd5e1;
 }
 
 body.light-mode .project-card:hover {
@@ -127,7 +130,7 @@ html {
 
 /* Project Card Styles */
 .project-card {
-    background-color: rgba(31, 41, 55, 0.5);
+    background-color: transparent;
     border: 1px solid #374151;
     border-radius: 12px;
     padding: 24px;

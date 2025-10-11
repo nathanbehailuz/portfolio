@@ -13,36 +13,36 @@ body {
 }
 
 body.light-mode {
-    background-color: #ffffff;
-    color: #1f2937;
+    background-color: #f8fafc;
+    color: #1e293b;
 }
 
 body.light-mode .bg-\[#111111\] {
-    background-color: #ffffff;
+    background-color: #f8fafc;
 }
 
 body.light-mode #header {
-    background-color: #ffffff;
+    background-color: #f8fafc;
 }
 
 body.light-mode .text-\[#E0E0E0\] {
-    color: #1f2937;
+    color: #1e293b;
 }
 
 body.light-mode .text-\[#A0A0A0\] {
-    color: #6b7280;
+    color: #64748b;
 }
 
 body.light-mode .text-white {
-    color: #1f2937;
+    color: #1e293b;
 }
 
 body.light-mode .bg-gray-700 {
-    background-color: #e5e7eb;
+    background-color: #e2e8f0;
 }
 
 body.light-mode .hover\:bg-gray-600:hover {
-    background-color: #d1d5db;
+    background-color: #cbd5e1;
 }
 
 .project-item .details {
