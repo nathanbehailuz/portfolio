@@ -69,30 +69,144 @@ body.light-mode .hover\:border-pink-400\/50:hover {
     border-color: #ec4899;
 }
 
+body.light-mode .filter-btn {
+    background-color: #f3f4f6;
+    color: #374151;
+}
+
+body.light-mode .filter-btn:hover {
+    background-color: #e5e7eb;
+}
+
+body.light-mode .filter-btn.active {
+    background-color: #10b981;
+    color: white;
+}
+
+body.light-mode .project-card {
+    background-color: #f9fafb;
+    border-color: #e5e7eb;
+}
+
+body.light-mode .project-card:hover {
+    border-color: #10b981;
+}
+
 html {
     scroll-padding-top: 6rem; /* Account for fixed header height */
 }
 
-/* Fall-in Animation */
-.fall-in {
-    opacity: 0;
-    transform: translateY(-30px);
-    animation: fallIn 0.8s ease-out forwards;
+/* Filter Button Styles */
+.filter-btn {
+    padding: 12px 20px;
+    border-radius: 8px;
+    background-color: #374151;
+    color: #d1d5db;
+    border: 2px solid #374151;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-@keyframes fallIn {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.filter-btn:hover {
+    background-color: #4b5563;
+    color: white;
+    border-color: #4b5563;
 }
 
-/* Staggered delays for different elements */
-.fall-in-delay-1 { animation-delay: 0.1s; }
-.fall-in-delay-2 { animation-delay: 0.2s; }
-.fall-in-delay-3 { animation-delay: 0.3s; }
-.fall-in-delay-4 { animation-delay: 0.4s; }
-.fall-in-delay-5 { animation-delay: 0.5s; }
-.fall-in-delay-6 { animation-delay: 0.6s; }
-.fall-in-delay-7 { animation-delay: 0.7s; }
-.fall-in-delay-8 { animation-delay: 0.8s; }
+.filter-btn.active {
+    background-color: #10b981;
+    color: white;
+    border-color: #10b981;
+    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+}
+
+/* Project Card Styles */
+.project-card {
+    background-color: rgba(31, 41, 55, 0.5);
+    border: 1px solid #374151;
+    border-radius: 12px;
+    padding: 24px;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    align-items: flex-start;
+}
+
+.project-card:hover {
+    border-color: #10b981;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Project card images removed */
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.project-tag {
+    padding: 4px 12px;
+    border-radius: 16px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.project-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+.project-action {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 10px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    min-width: 120px;
+}
+
+.project-action.github {
+    background-color: #374151;
+    color: #d1d5db;
+}
+
+.project-action.github:hover {
+    background-color: #4b5563;
+    color: white;
+}
+
+.project-action.demo {
+    background-color: #dc2626;
+    color: white;
+}
+
+.project-action.demo:hover {
+    background-color: #b91c1c;
+}
+
+.project-action.try-it {
+    background-color: #2563eb;
+    color: white;
+}
+
+.project-action.try-it:hover {
+    background-color: #1d4ed8;
+}
+
+/* Fall-in animations removed */

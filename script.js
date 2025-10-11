@@ -13,28 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
         themeIcon.className = 'fas fa-moon text-blue-600';
     }
     
-    // Fall-in animation on page load
-    function animateElements() {
-        // Animate sidebar elements
-        const sidebar = document.querySelector('aside');
-        if (sidebar) {
-            sidebar.classList.add('fall-in');
-        }
-        
-        // Animate main sections with staggered delays
-        const sections = document.querySelectorAll('main section');
-        sections.forEach((section, index) => {
-            section.classList.add('fall-in', `fall-in-delay-${Math.min(index + 1, 8)}`);
-        });
-        
-        // Animate header
-        if (header) {
-            header.classList.add('fall-in');
-        }
-    }
-    
-    // Run animations
-    animateElements();
+    // Fall-in animations removed
     
     themeToggle.addEventListener('click', function() {
         if (body.classList.contains('light-mode')) {

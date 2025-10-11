@@ -46,144 +46,39 @@
             </aside>
             
             <main class="w-3/4 py-10 pl-4 pr-16">
-                <div class="max-w-4xl mx-auto">
+                <div class="max-w-6xl mx-auto">
                     <section id="projects">
-                        <h2 class="text-2xl font-bold text-white mb-8 flex items-center"><span class="w-1 h-8 bg-gradient-to-b from-emerald-400 to-green-500 mr-4 rounded"></span>Projects</h2>
+                        <div class="mb-8">
+                            <h2 class="text-2xl font-bold text-white mb-2 flex items-center">
+                                <i class="fas fa-folder-open text-emerald-400 mr-3"></i>Projects
+                            </h2>
+                            <p class="text-sm text-[#A0A0A0]">Filter projects by category to explore my work.</p>
+                        </div>
 
-                        <div class="space-y-12">
-                            <!-- AutoVert Project -->
-                            <div id="autovert" class="bg-gray-900/50 rounded-lg p-6 border border-gray-700 hover:border-cyan-400/50 transition-all duration-300">
-                                <div class="flex flex-col lg:flex-row gap-6">
-                                    <div class="lg:w-1/2">
-                                        <img src="images/autovert.png" alt="AutoVert App Screenshot" class="w-full h-64 object-cover rounded-lg shadow-lg"/>
-                                    </div>
-                                    <div class="lg:w-1/2">
-                                        <h3 class="text-xl font-bold text-white mb-3">AutoVert</h3>
-                                        <p class="text-[#A0A0A0] mb-4 leading-relaxed">Led a team of 4 to build an AI-powered iOS app that provides vehicle diagnostics with 90% accuracy and repair estimates that save users an average of 15%. The app uses advanced machine learning models to analyze vehicle issues and provide detailed repair recommendations.</p>
-                                        <div class="flex flex-wrap gap-2 mb-4">
-                                            <span class="px-2 py-1 bg-cyan-400/20 text-cyan-400 text-xs rounded">Flutter</span>
-                                            <span class="px-2 py-1 bg-blue-400/20 text-blue-400 text-xs rounded">Firebase</span>
-                                            <span class="px-2 py-1 bg-green-400/20 text-green-400 text-xs rounded">OpenAI GPT-4</span>
-                                            <span class="px-2 py-1 bg-purple-400/20 text-purple-400 text-xs rounded">Gemini AI</span>
-                                            <span class="px-2 py-1 bg-orange-400/20 text-orange-400 text-xs rounded">Google Cloud</span>
-                                        </div>
-                                        <div class="flex flex-wrap gap-3">
-                                            <a href="#" class="flex items-center space-x-2 px-4 py-2 bg-gray-700 hover:bg-gray-600 rounded-lg transition-colors group">
-                                                <i class="fab fa-github text-gray-300 group-hover:text-white"></i>
-                                                <span class="text-sm">GitHub</span>
-                                            </a>
-                                            <a href="#" class="flex items-center space-x-2 px-4 py-2 bg-red-600 hover:bg-red-700 rounded-lg transition-colors group">
-                                                <i class="fas fa-play text-white"></i>
-                                                <span class="text-sm">Demo</span>
-                                            </a>
-                                            <a href="#" class="flex items-center space-x-2 px-4 py-2 bg-indigo-600 hover:bg-indigo-700 rounded-lg transition-colors group">
-                                                <i class="fas fa-external-link-alt text-white"></i>
-                                                <span class="text-sm">Try It</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
+                        <!-- Filter Tabs -->
+                        <div class="mb-8">
+                            <div class="flex flex-wrap items-center gap-4">
+                                <button class="filter-btn active" data-filter="all">
+                                    <i class="fas fa-th-large mr-2"></i>All
+                                </button>
+                                <button class="filter-btn" data-filter="websites">
+                                    <i class="fas fa-globe mr-2"></i>Websites
+                                </button>
+                                <button class="filter-btn" data-filter="ml">
+                                    <i class="fas fa-brain mr-2"></i>Machine Learning
+                                </button>
+                                <button class="filter-btn" data-filter="mobile">
+                                    <i class="fas fa-mobile-alt mr-2"></i>Mobile Apps
+                                </button>
+                                <button class="filter-btn" data-filter="finance">
+                                    <i class="fas fa-chart-line mr-2"></i>Finance
+                                </button>
                             </div>
+                        </div>
 
-                            <!-- CliquePix Project -->
-                            <div id="cliquepix" class="bg-gray-900/50 rounded-lg p-6 border border-gray-700 hover:border-emerald-400/50 transition-all duration-300">
-                                <div class="flex flex-col lg:flex-row gap-6">
-                                    <div class="lg:w-1/2">
-                                        <img src="https://via.placeholder.com/400x250/1f2937/10b981?text=CliquePix+Platform" alt="CliquePix Platform Screenshot" class="w-full h-64 object-cover rounded-lg shadow-lg"/>
-                                    </div>
-                                    <div class="lg:w-1/2">
-                                        <h3 class="text-xl font-bold text-white mb-3">CliquePix</h3>
-                                        <p class="text-[#A0A0A0] mb-4 leading-relaxed">Developed a privacy-first photo-sharing web platform with granular permissions and a client-side facial recognition search that reduced media search time by 90%. Built with focus on user privacy and data protection.</p>
-                                        <div class="flex flex-wrap gap-2 mb-4">
-                                            <span class="px-2 py-1 bg-green-400/20 text-green-400 text-xs rounded">Node.js</span>
-                                            <span class="px-2 py-1 bg-yellow-400/20 text-yellow-400 text-xs rounded">MongoDB</span>
-                                            <span class="px-2 py-1 bg-orange-400/20 text-orange-400 text-xs rounded">TensorFlow.js</span>
-                                            <span class="px-2 py-1 bg-blue-400/20 text-blue-400 text-xs rounded">Handlebars</span>
-                                        </div>
-                                        <div class="flex flex-wrap gap-3">
-                                            <a href="#" class="flex items-center space-x-2 px-4 py-2 bg-gray-700 hover:bg-gray-600 rounded-lg transition-colors group">
-                                                <i class="fab fa-github text-gray-300 group-hover:text-white"></i>
-                                                <span class="text-sm">GitHub</span>
-                                            </a>
-                                            <a href="#" class="flex items-center space-x-2 px-4 py-2 bg-red-600 hover:bg-red-700 rounded-lg transition-colors group">
-                                                <i class="fas fa-play text-white"></i>
-                                                <span class="text-sm">Demo</span>
-                                            </a>
-                                            <a href="#" class="flex items-center space-x-2 px-4 py-2 bg-emerald-600 hover:bg-emerald-700 rounded-lg transition-colors group">
-                                                <i class="fas fa-external-link-alt text-white"></i>
-                                                <span class="text-sm">Try It</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- The Insider Index Project -->
-                            <div id="insider-index" class="bg-gray-900/50 rounded-lg p-6 border border-gray-700 hover:border-pink-400/50 transition-all duration-300">
-                                <div class="flex flex-col lg:flex-row gap-6">
-                                    <div class="lg:w-1/2">
-                                        <img src="https://via.placeholder.com/400x250/1f2937/ec4899?text=Insider+Index" alt="The Insider Index Screenshot" class="w-full h-64 object-cover rounded-lg shadow-lg"/>
-                                    </div>
-                                    <div class="lg:w-1/2">
-                                        <h3 class="text-xl font-bold text-white mb-3">The Insider Index</h3>
-                                        <p class="text-[#A0A0A0] mb-4 leading-relaxed">Deployed an end-to-end platform that processes 1,000+ daily SEC filings to generate insider trading signals, achieving a 5% alpha over market benchmarks in backtests. Features real-time data processing and machine learning predictions.</p>
-                                        <div class="flex flex-wrap gap-2 mb-4">
-                                            <span class="px-2 py-1 bg-blue-400/20 text-blue-400 text-xs rounded">Python</span>
-                                            <span class="px-2 py-1 bg-green-400/20 text-green-400 text-xs rounded">LightGBM</span>
-                                            <span class="px-2 py-1 bg-cyan-400/20 text-cyan-400 text-xs rounded">FastAPI</span>
-                                            <span class="px-2 py-1 bg-purple-400/20 text-purple-400 text-xs rounded">React</span>
-                                        </div>
-                                        <div class="flex flex-wrap gap-3">
-                                            <a href="#" class="flex items-center space-x-2 px-4 py-2 bg-gray-700 hover:bg-gray-600 rounded-lg transition-colors group">
-                                                <i class="fab fa-github text-gray-300 group-hover:text-white"></i>
-                                                <span class="text-sm">GitHub</span>
-                                            </a>
-                                            <a href="#" class="flex items-center space-x-2 px-4 py-2 bg-red-600 hover:bg-red-700 rounded-lg transition-colors group">
-                                                <i class="fas fa-play text-white"></i>
-                                                <span class="text-sm">Demo</span>
-                                            </a>
-                                            <a href="#" class="flex items-center space-x-2 px-4 py-2 bg-pink-600 hover:bg-pink-700 rounded-lg transition-colors group">
-                                                <i class="fas fa-external-link-alt text-white"></i>
-                                                <span class="text-sm">Try It</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- AI Plays Flappy Bird Project -->
-                            <div id="flappybird" class="bg-gray-900/50 rounded-lg p-6 border border-gray-700 hover:border-amber-400/50 transition-all duration-300">
-                                <div class="flex flex-col lg:flex-row gap-6">
-                                    <div class="lg:w-1/2">
-                                        <img src="images/flappybird.png" alt="AI Flappy Bird Screenshot" class="w-full h-64 object-cover rounded-lg shadow-lg"/>
-                                    </div>
-                                    <div class="lg:w-1/2">
-                                        <h3 class="text-xl font-bold text-white mb-3">AI Plays Flappy Bird</h3>
-                                        <p class="text-[#A0A0A0] mb-4 leading-relaxed">Trained an AI agent using the NEAT reinforcement learning algorithm to master Flappy Bird, increasing its average score from 0 to over 30 within 50 generations. Demonstrates advanced neural network evolution techniques.</p>
-                                        <div class="flex flex-wrap gap-2 mb-4">
-                                            <span class="px-2 py-1 bg-purple-400/20 text-purple-400 text-xs rounded">Reinforcement Learning</span>
-                                            <span class="px-2 py-1 bg-pink-400/20 text-pink-400 text-xs rounded">Neural Networks</span>
-                                            <span class="px-2 py-1 bg-blue-400/20 text-blue-400 text-xs rounded">Pygame</span>
-                                        </div>
-                                        <div class="flex flex-wrap gap-3">
-                                            <a href="#" class="flex items-center space-x-2 px-4 py-2 bg-gray-700 hover:bg-gray-600 rounded-lg transition-colors group">
-                                                <i class="fab fa-github text-gray-300 group-hover:text-white"></i>
-                                                <span class="text-sm">GitHub</span>
-                                            </a>
-                                            <a href="#" class="flex items-center space-x-2 px-4 py-2 bg-red-600 hover:bg-red-700 rounded-lg transition-colors group">
-                                                <i class="fas fa-play text-white"></i>
-                                                <span class="text-sm">Demo</span>
-                                            </a>
-                                            <a href="#" class="flex items-center space-x-2 px-4 py-2 bg-amber-600 hover:bg-amber-700 rounded-lg transition-colors group">
-                                                <i class="fas fa-external-link-alt text-white"></i>
-                                                <span class="text-sm">Try It</span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            
+                        <!-- Projects Grid -->
+                        <div id="projectsGrid" class="space-y-6">
+                            <!-- Projects will be dynamically loaded here -->
                         </div>
                     </section>
                 </div>
@@ -199,5 +94,6 @@
     </div>
 
     <script src="script.js"></script>
+    <script src="projects.js"></script>
 </body>
 </html>

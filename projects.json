@@ -1,0 +1,64 @@
+{
+  "projects": [
+    {
+      "id": "autovert",
+      "name": "AutoVert",
+      "icon": "fas fa-car",
+      "iconColor": "text-green-400",
+      "titleColor": "text-green-400",
+      "description": "Led a team of 4 to build an AI-powered iOS app that provides vehicle diagnostics with 90% accuracy and repair estimates that save users an average of 15%. The app uses advanced machine learning models to analyze vehicle issues and provide detailed repair recommendations.",
+      "tags": ["Mobile", "ML"],
+      "tools": ["Flutter", "Firebase", "OpenAI GPT-4", "Gemini AI", "Google Cloud"],
+      "image": "images/autovert.png",
+      "demo_link": "#",
+      "github_link": "#",
+      "try_it_link": "#",
+      "category": "Mobile"
+    },
+    {
+      "id": "cliquepix",
+      "name": "CliquePix",
+      "icon": "fas fa-images",
+      "iconColor": "text-blue-400",
+      "titleColor": "text-blue-400",
+      "description": "Developed a privacy-first photo-sharing web platform with granular permissions and a client-side facial recognition search that reduced media search time by 90%. Built with focus on user privacy and data protection.",
+      "tags": ["Web", "ML"],
+      "tools": ["Node.js", "MongoDB", "TensorFlow.js", "Handlebars"],
+      "image": "https://via.placeholder.com/400x250/1f2937/10b981?text=CliquePix+Platform",
+      "demo_link": "#",
+      "github_link": "#",
+      "try_it_link": "https://cliquepix-demo.com",
+      "category": "Websites"
+    },
+    {
+      "id": "insider-index",
+      "name": "The Insider Index",
+      "icon": "fas fa-chart-line",
+      "iconColor": "text-pink-400",
+      "titleColor": "text-pink-400",
+      "description": "Deployed an end-to-end platform that processes 1,000+ daily SEC filings to generate insider trading signals, achieving a 5% alpha over market benchmarks in backtests. Features real-time data processing and machine learning predictions.",
+      "tags": ["Finance", "ML"],
+      "tools": ["Python", "LightGBM", "FastAPI", "React"],
+      "image": "https://via.placeholder.com/400x250/1f2937/ec4899?text=Insider+Index",
+      "demo_link": "#",
+      "github_link": "#",
+      "try_it_link": "#",
+      "category": "Finance"
+    },
+    {
+      "id": "flappybird",
+      "name": "AI Plays Flappy Bird",
+      "icon": "fas fa-gamepad",
+      "iconColor": "text-yellow-400",
+      "titleColor": "text-yellow-400",
+      "description": "Trained an AI agent using the NEAT reinforcement learning algorithm to master Flappy Bird, increasing its average score from 0 to over 30 within 50 generations. Demonstrates advanced neural network evolution techniques.",
+      "tags": ["ML"],
+      "tools": ["Reinforcement Learning", "Neural Networks", "Pygame"],
+      "image": "images/flappybird.png",
+      "demo_link": "#",
+      "github_link": "#",
+      "try_it_link": "#",
+      "category": "ML"
+    }
+  ]
+}
