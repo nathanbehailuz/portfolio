@@ -6,59 +6,119 @@
       "icon": "fas fa-car",
       "iconColor": "text-green-400",
       "titleColor": "text-green-400",
-      "description": "Led a team of 4 to build an AI-powered iOS app that provides vehicle diagnostics with 90% accuracy and repair estimates that save users an average of 15%. The app uses advanced machine learning models to analyze vehicle issues and provide detailed repair recommendations.",
+      "description": [
+        "Led development of a cross-platform AI-powered mobile app that performs intelligent vehicle diagnostics and repair cost estimation using GPT-4 and Gemini AI.",
+        "Architected a Clean-Architecture Flutter system integrating Firebase, Google Maps, and multimodal input (text, image, voice) for 90% diagnostic accuracy."
+      ],
       "tags": ["Mobile", "ML"],
-      "tools": ["Flutter", "Firebase", "OpenAI GPT-4", "Gemini AI", "Google Cloud"],
-      "image": "images/autovert.png",
+      "tools": ["Flutter", "Firebase", "OpenAI GPT-4", "Gemini AI", "Google Maps API", "Dio", "Bloc"],
       "demo_link": "#",
-      "github_link": "#",
+      "github_link": "https://github.com/nathanbehailuz/autovert",
       "try_it_link": "#",
       "category": "Mobile"
     },
     {
-      "id": "cliquepix",
-      "name": "CliquePix",
-      "icon": "fas fa-images",
+      "id": "insidex",
+      "name": "InsideX",
+      "icon": "fas fa-chart-line",
       "iconColor": "text-blue-400",
       "titleColor": "text-blue-400",
-      "description": "Developed a privacy-first photo-sharing web platform with granular permissions and a client-side facial recognition search that reduced media search time by 90%. Built with focus on user privacy and data protection.",
-      "tags": ["Web", "ML"],
-      "tools": ["Node.js", "MongoDB", "TensorFlow.js", "Handlebars"],
-      "image": "https://via.placeholder.com/400x250/1f2937/10b981?text=CliquePix+Platform",
+      "description": [
+        "Built a web platform that detects high-conviction insider trades from SEC Form 4 filings using a LightGBM scoring model with interpretable features.",
+        "Designed a FastAPI-based backend and React frontend for real-time alerts, achieving top-decile alpha of 5% in historical backtests."
+      ],
+      "tags": ["Web", "Finance", "ML"],
+      "tools": ["FastAPI", "LightGBM", "PostgreSQL", "React", "TailwindCSS", "Celery", "Redis", "SendGrid"],
       "demo_link": "#",
-      "github_link": "#",
-      "try_it_link": "https://cliquepix-demo.com",
-      "category": "Websites"
+      "github_link": "https://github.com/nathanbehailuz/InsideX",
+      "try_it_link": "#",
+      "category": "Web"
     },
     {
-      "id": "insider-index",
-      "name": "The Insider Index",
-      "icon": "fas fa-chart-line",
+      "id": "cliquepix",
+      "name": "CliquePix",
+      "icon": "fas fa-camera-retro",
       "iconColor": "text-pink-400",
       "titleColor": "text-pink-400",
-      "description": "Deployed an end-to-end platform that processes 1,000+ daily SEC filings to generate insider trading signals, achieving a 5% alpha over market benchmarks in backtests. Features real-time data processing and machine learning predictions.",
-      "tags": ["Finance", "ML"],
-      "tools": ["Python", "LightGBM", "FastAPI", "React"],
-      "image": "https://via.placeholder.com/400x250/1f2937/ec4899?text=Insider+Index",
+      "description": [
+        "Developed a privacy-first photo and video sharing web app for close friends with per-media access control and AI-powered facial search.",
+        "Integrated TensorFlow.js and face-api.js for person recognition, backed by Node.js, Express, and MongoDB with secure bcrypt authentication."
+      ],
+      "tags": ["Web", "ML"],
+      "tools": ["Node.js", "Express", "MongoDB", "Mongoose", "TensorFlow.js", "face-api.js", "Handlebars", "Multer"],
       "demo_link": "#",
-      "github_link": "#",
+      "github_link": "https://github.com/nathanbehailuz/cliquepix",
       "try_it_link": "#",
-      "category": "Finance"
+      "category": "Web"
     },
     {
-      "id": "flappybird",
-      "name": "AI Plays Flappy Bird",
-      "icon": "fas fa-gamepad",
+      "id": "brain-tumor-detection",
+      "name": "Brain Tumor Detection",
+      "icon": "fas fa-brain",
+      "iconColor": "text-red-400",
+      "titleColor": "text-red-400",
+      "description": [
+        "Created a CNN-based medical imaging system to classify brain MRI scans as tumor or non-tumor with 90% accuracy.",
+        "Built an end-to-end pipeline using TensorFlow and Flask, allowing real-time predictions through an interactive web interface with secure file uploads."
+      ],
+      "tags": ["ML", "Web"],
+      "tools": ["TensorFlow", "Keras", "Flask", "OpenCV", "NumPy", "Pandas", "Bootstrap"],
+      "demo_link": "#",
+      "github_link": "https://github.com/nathanbehailuz/brain-tumor-detection",
+      "try_it_link": "#",
+      "category": "ML"
+    },
+    {
+      "id": "churn-prediction",
+      "name": "Customer Churn Prediction",
+      "icon": "fas fa-user-slash",
       "iconColor": "text-yellow-400",
       "titleColor": "text-yellow-400",
-      "description": "Trained an AI agent using the NEAT reinforcement learning algorithm to master Flappy Bird, increasing its average score from 0 to over 30 within 50 generations. Demonstrates advanced neural network evolution techniques.",
+      "description": [
+        "Implemented a neural-network model in TensorFlow to predict customer churn in telecom data with 79% accuracy.",
+        "Engineered data pipelines with Pandas and Scikit-learn for preprocessing, encoding, and feature scaling, uncovering key churn indicators such as tenure and contract type."
+      ],
       "tags": ["ML"],
-      "tools": ["Reinforcement Learning", "Neural Networks", "Pygame"],
-      "image": "images/flappybird.png",
+      "tools": ["TensorFlow", "Keras", "Pandas", "NumPy", "Matplotlib", "Seaborn", "Scikit-learn"],
       "demo_link": "#",
-      "github_link": "#",
+      "github_link": "https://github.com/nathanbehailuz/churn-prediction",
+      "try_it_link": "#",
+      "category": "ML"
+    },
+    {
+      "id": "ml-from-scratch",
+      "name": "ML From Scratch",
+      "icon": "fas fa-code",
+      "iconColor": "text-purple-400",
+      "titleColor": "text-purple-400",
+      "description": [
+        "Developed a comprehensive educational ML library implementing core algorithms—Linear/Logistic Regression, SVM, Decision Trees, K-Means, and GANs—entirely from scratch using NumPy and PyTorch.",
+        "Showcased deep mathematical understanding through manual gradient computations and optimization logic."
+      ],
+      "tags": ["ML"],
+      "tools": ["Python", "NumPy", "Pandas", "PyTorch", "Matplotlib", "SciPy"],
+      "demo_link": "#",
+      "github_link": "https://github.com/nathanbehailuz/ml-from-scratch",
+      "try_it_link": "#",
+      "category": "ML"
+    },
+    {
+      "id": "ai-flappy-bird",
+      "name": "AI Plays Flappy Bird",
+      "icon": "fas fa-dove",
+      "iconColor": "text-orange-400",
+      "titleColor": "text-orange-400",
+      "description": [
+        "Designed an AI agent that learns to play Flappy Bird using the NEAT algorithm for neuroevolution.",
+        "Implemented the full physics engine and visualization in Pygame, evolving neural networks that achieved average scores of 30+ through reinforcement learning."
+      ],
+      "tags": ["ML"],
+      "tools": ["Python", "Pygame", "NEAT-Python", "Matplotlib", "Graphviz"],
+      "demo_link": "#",
+      "github_link": "https://github.com/nathanbehailuz/AI-plays-Flappy-Bird",
       "try_it_link": "#",
       "category": "ML"
     }
   ]
+  
 }

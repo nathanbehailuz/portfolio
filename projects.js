@@ -73,7 +73,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     <i class="${project.icon} ${project.iconColor} mr-3 text-lg"></i>
                     <span class="${project.titleColor}">${project.name}</span>
                 </h3>
-                <p class="text-[#A0A0A0] mb-4 leading-relaxed text-sm">${project.description}</p>
+                <ul class="text-[#A0A0A0] mb-4 leading-relaxed text-sm list-disc list-inside space-y-1">
+                    ${project.description.map(point => `<li>${point}</li>`).join('')}
+                </ul>
                 <div class="project-tags mb-4">
                     ${project.tools.map(tool => `<span class="project-tag ${colors.bg} ${colors.text}">${tool}</span>`).join('')}
                 </div>
