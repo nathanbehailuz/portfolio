@@ -14,7 +14,7 @@
       "tools": ["Flutter", "Firebase", "OpenAI GPT-4", "Gemini AI", "Google Maps API", "Dio", "Bloc"],
       "demo_link": "#",
       "github_link": "https://github.com/nathanbehailuz/autovert",
-      "try_it_link": "#",
+      "try_it_link": "localhost.html",
       "category": "Mobile"
     },
     {
@@ -31,7 +31,7 @@
       "tools": ["FastAPI", "LightGBM", "PostgreSQL", "React", "TailwindCSS", "Celery", "Redis", "SendGrid"],
       "demo_link": "#",
       "github_link": "https://github.com/nathanbehailuz/InsideX",
-      "try_it_link": "#",
+      "try_it_link": "localhost.html",
       "category": "Web"
     },
     {
@@ -48,7 +48,7 @@
       "tools": ["Node.js", "Express", "MongoDB", "Mongoose", "TensorFlow.js", "face-api.js", "Handlebars", "Multer"],
       "demo_link": "#",
       "github_link": "https://github.com/nathanbehailuz/cliquepix",
-      "try_it_link": "#",
+      "try_it_link": "localhost.html",
       "category": "Web"
     },
     {
@@ -65,7 +65,7 @@
       "tools": ["TensorFlow", "Keras", "Flask", "OpenCV", "NumPy", "Pandas", "Bootstrap"],
       "demo_link": "#",
       "github_link": "https://github.com/nathanbehailuz/brain-tumor-detection",
-      "try_it_link": "#",
+      "try_it_link": "localhost.html",
       "category": "ML"
     },
     {
@@ -82,7 +82,7 @@
       "tools": ["TensorFlow", "Keras", "Pandas", "NumPy", "Matplotlib", "Seaborn", "Scikit-learn"],
       "demo_link": "#",
       "github_link": "https://github.com/nathanbehailuz/churn-prediction",
-      "try_it_link": "#",
+      "try_it_link": "localhost.html",
       "category": "ML"
     },
     {
@@ -99,7 +99,7 @@
       "tools": ["Python", "NumPy", "Pandas", "PyTorch", "Matplotlib", "SciPy"],
       "demo_link": "#",
       "github_link": "https://github.com/nathanbehailuz/ml-from-scratch",
-      "try_it_link": "#",
+      "try_it_link": "localhost.html",
       "category": "ML"
     },
     {
@@ -116,7 +116,7 @@
       "tools": ["Python", "Pygame", "NEAT-Python", "Matplotlib", "Graphviz"],
       "demo_link": "#",
       "github_link": "https://github.com/nathanbehailuz/AI-plays-Flappy-Bird",
-      "try_it_link": "#",
+      "try_it_link": "localhost.html",
       "category": "ML"
     }
   ]
