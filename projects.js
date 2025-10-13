@@ -57,15 +57,27 @@ document.addEventListener('DOMContentLoaded', function() {
         // Debug: Log project info (remove this in production)
         console.log(`Project: ${project.name}, Tags: ${JSON.stringify(project.tags)}, Has Web tag: ${project.tags.includes('Web')}`);
 
-        // Get color for category based on primary tag
-        const categoryColors = {
-            'Mobile': { bg: 'bg-cyan-400/20', text: 'text-cyan-400' },
-            'Web': { bg: 'bg-emerald-400/20', text: 'text-emerald-400' },
-            'ML': { bg: 'bg-purple-400/20', text: 'text-purple-400' },
-            'Finance': { bg: 'bg-pink-400/20', text: 'text-pink-400' }
-        };
-        const primaryTag = project.tags[0]; // Use first tag for color
-        const colors = categoryColors[primaryTag] || categoryColors['Web'];
+        // Get unique color for each project based on project name hash
+        const projectColors = [
+            { bg: 'bg-cyan-400/20', text: 'text-cyan-400', hover: 'rgba(34, 211, 238, 0.5)' },
+            { bg: 'bg-emerald-400/20', text: 'text-emerald-400', hover: 'rgba(16, 185, 129, 0.5)' },
+            { bg: 'bg-purple-400/20', text: 'text-purple-400', hover: 'rgba(168, 85, 247, 0.5)' },
+            { bg: 'bg-pink-400/20', text: 'text-pink-400', hover: 'rgba(236, 72, 153, 0.5)' },
+            { bg: 'bg-orange-400/20', text: 'text-orange-400', hover: 'rgba(251, 146, 60, 0.5)' },
+            { bg: 'bg-indigo-400/20', text: 'text-indigo-400', hover: 'rgba(99, 102, 241, 0.5)' },
+            { bg: 'bg-teal-400/20', text: 'text-teal-400', hover: 'rgba(45, 212, 191, 0.5)' },
+            { bg: 'bg-rose-400/20', text: 'text-rose-400', hover: 'rgba(251, 113, 133, 0.5)' },
+            { bg: 'bg-lime-400/20', text: 'text-lime-400', hover: 'rgba(163, 230, 53, 0.5)' },
+            { bg: 'bg-violet-400/20', text: 'text-violet-400', hover: 'rgba(139, 92, 246, 0.5)' }
+        ];
+        
+        // Generate consistent color based on project name
+        let hash = 0;
+        for (let i = 0; i < project.name.length; i++) {
+            hash = ((hash << 5) - hash + project.name.charCodeAt(i)) & 0xffffffff;
+        }
+        const colorIndex = Math.abs(hash) % projectColors.length;
+        const colors = projectColors[colorIndex];
 
         card.innerHTML = `
             <div class="flex-1">
@@ -77,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     ${project.description.map(point => `<li>${point}</li>`).join('')}
                 </ul>
                 <div class="project-tags mb-4">
-                    ${project.tools.map(tool => `<span class="project-tag ${colors.bg} ${colors.text}">${tool}</span>`).join('')}
+                    ${project.tools.map(tool => `<span class="project-tag ${colors.text}">${tool}</span>`).join('')}
                 </div>
             </div>
             <div class="project-actions flex flex-col gap-3">
@@ -98,12 +110,9 @@ document.addEventListener('DOMContentLoaded', function() {
             </div>
         `;
 
-        // Add hover effect based on category
+        // Add hover effect with unique color
         card.addEventListener('mouseenter', () => {
-            if (primaryTag === 'Mobile') card.style.borderColor = 'rgba(34, 211, 238, 0.5)'; // cyan
-            else if (primaryTag === 'Web') card.style.borderColor = 'rgba(16, 185, 129, 0.5)'; // emerald
-            else if (primaryTag === 'ML') card.style.borderColor = 'rgba(168, 85, 247, 0.5)'; // purple
-            else if (primaryTag === 'Finance') card.style.borderColor = 'rgba(236, 72, 153, 0.5)'; // pink
+            card.style.borderColor = colors.hover;
         });
 
         card.addEventListener('mouseleave', () => {

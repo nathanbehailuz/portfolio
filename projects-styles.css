@@ -70,19 +70,19 @@ body.light-mode .hover\:border-pink-400\/50:hover {
 }
 
 body.light-mode .filter-btn {
-    background-color: #e2e8f0;
+    background-color: transparent;
     color: #475569;
     border-color: #cbd5e1;
 }
 
 body.light-mode .filter-btn:hover {
-    background-color: #cbd5e1;
+    background-color: transparent;
     color: #334155;
 }
 
 body.light-mode .filter-btn.active {
-    background-color: #10b981;
-    color: white;
+    background-color: transparent;
+    color: #10b981;
     border-color: #10b981;
 }
 
@@ -103,7 +103,7 @@ html {
 .filter-btn {
     padding: 12px 20px;
     border-radius: 8px;
-    background-color: #374151;
+    background-color: transparent;
     color: #d1d5db;
     border: 2px solid #374151;
     cursor: pointer;
@@ -116,16 +116,16 @@ html {
 }
 
 .filter-btn:hover {
-    background-color: #4b5563;
+    background-color: transparent;
     color: white;
     border-color: #4b5563;
 }
 
 .filter-btn.active {
-    background-color: #10b981;
-    color: white;
+    background-color: transparent;
+    color: #10b981;
     border-color: #10b981;
-    box-shadow: 0 0 0 3px rgba(16, 185, 129, 0.1);
+    box-shadow: none;
 }
 
 /* Project Card Styles */
@@ -168,6 +168,7 @@ html {
     flex-direction: column;
     gap: 12px;
     flex-shrink: 0;
+    margin-top: 40px;
 }
 
 .project-action {
@@ -185,31 +186,39 @@ html {
 }
 
 .project-action.github {
-    background-color: #374151;
-    color: #d1d5db;
+    background-color: transparent;
+    color: #9ca3af;
+    border: 1px solid #374151;
 }
 
 .project-action.github:hover {
-    background-color: #4b5563;
-    color: white;
+    background-color: transparent;
+    color: #d1d5db;
+    border-color: #4b5563;
 }
 
 .project-action.demo {
-    background-color: #dc2626;
-    color: white;
+    background-color: transparent;
+    color: #dc2626;
+    border: 1px solid #dc2626;
 }
 
 .project-action.demo:hover {
-    background-color: #b91c1c;
+    background-color: transparent;
+    color: #ef4444;
+    border-color: #ef4444;
 }
 
 .project-action.try-it {
-    background-color: #2563eb;
-    color: white;
+    background-color: transparent;
+    color: #2563eb;
+    border: 1px solid #2563eb;
 }
 
 .project-action.try-it:hover {
-    background-color: #1d4ed8;
+    background-color: transparent;
+    color: #3b82f6;
+    border-color: #3b82f6;
 }
 
 /* Fall-in animations removed */
