@@ -139,6 +139,15 @@ html {
     flex-direction: row;
     gap: 24px;
     align-items: flex-start;
+    scroll-margin-top: 140px;
+}
+
+.project-card.highlight {
+    background-color: rgba(148, 163, 184, 0.08);
+}
+
+body.light-mode .project-card.highlight {
+    background-color: rgba(14, 165, 233, 0.12);
 }
 
 .project-card:hover {

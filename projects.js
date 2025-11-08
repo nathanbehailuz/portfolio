@@ -4,6 +4,13 @@ document.addEventListener('DOMContentLoaded', function() {
     const filterButtons = document.querySelectorAll('.filter-btn');
     let projects = [];
     let currentFilter = 'all';
+    const filterMapping = {
+        'websites': 'Web',
+        'ml': 'ML',
+        'mobile': 'Mobile',
+        'finance': 'Finance'
+    };
+    let pendingHashNavigation = null;
 
     // Load projects from JSON
     async function loadProjects() {
@@ -12,6 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const data = await response.json();
             projects = data.projects;
             renderProjects();
+            handleHashNavigation({ forceScroll: true });
         } catch (error) {
             console.error('Error loading projects:', error);
         }
@@ -23,17 +31,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Apply category filter
         if (currentFilter !== 'all') {
-            // Map filter values to project tags
-            const filterMapping = {
-                'websites': 'Web',
-                'ml': 'ML',
-                'mobile': 'Mobile',
-                'finance': 'Finance'
-            };
-            
             const targetTag = filterMapping[currentFilter];
             if (targetTag) {
-                filteredProjects = filteredProjects.filter(project => 
+                filteredProjects = filteredProjects.filter(project =>
                     project.tags.includes(targetTag)
                 );
             }
@@ -47,15 +47,20 @@ document.addEventListener('DOMContentLoaded', function() {
             const projectCard = createProjectCard(project, index);
             projectsGrid.appendChild(projectCard);
         });
+
+        if (pendingHashNavigation) {
+            const navigated = scrollToProject(pendingHashNavigation, { forceScroll: true });
+            if (navigated) {
+                pendingHashNavigation = null;
+            }
+        }
     }
 
     // Create project card element
     function createProjectCard(project, index) {
         const card = document.createElement('div');
         card.className = 'project-card';
-        
-        // Debug: Log project info (remove this in production)
-        console.log(`Project: ${project.name}, Tags: ${JSON.stringify(project.tags)}, Has Web tag: ${project.tags.includes('Web')}`);
+        card.id = project.id;
 
         // Get unique color for each project based on project name hash
         const projectColors = [
@@ -70,7 +75,7 @@ document.addEventListener('DOMContentLoaded', function() {
             { bg: 'bg-lime-400/20', text: 'text-lime-400', hover: 'rgba(163, 230, 53, 0.5)' },
             { bg: 'bg-violet-400/20', text: 'text-violet-400', hover: 'rgba(139, 92, 246, 0.5)' }
         ];
-        
+
         // Generate consistent color based on project name
         let hash = 0;
         for (let i = 0; i < project.name.length; i++) {
@@ -78,12 +83,15 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         const colorIndex = Math.abs(hash) % projectColors.length;
         const colors = projectColors[colorIndex];
+        card.dataset.hoverColor = colors.hover;
 
         card.innerHTML = `
             <div class="flex-1">
-                <h3 class="text-xl font-bold mb-3 flex items-center">
-                    <i class="${project.icon} ${project.iconColor} mr-3 text-lg"></i>
-                    <span class="${project.titleColor}">${project.name}</span>
+                <h3 class="text-xl font-bold mb-3">
+                    <a href="#${project.id}" class="inline-flex items-center gap-3 no-underline ${project.titleColor} hover:underline">
+                        <i class="${project.icon} ${project.iconColor} text-lg"></i>
+                        <span>${project.name}</span>
+                    </a>
                 </h3>
                 <ul class="text-[#A0A0A0] mb-4 leading-relaxed text-sm list-disc list-inside space-y-1">
                     ${project.description.map(point => `<li>${point}</li>`).join('')}
@@ -122,19 +130,78 @@ document.addEventListener('DOMContentLoaded', function() {
         return card;
     }
 
+    function scrollToProject(projectId, { forceScroll = false } = {}) {
+        const card = document.getElementById(projectId);
+        if (!card) {
+            return false;
+        }
+
+        const highlightColor = card.dataset.hoverColor || 'rgba(34, 211, 238, 0.5)';
+        card.classList.add('highlight');
+        card.style.borderColor = highlightColor;
+        card.style.boxShadow = `0 0 0 2px ${highlightColor}`;
+
+        if (forceScroll) {
+            card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        if (card.dataset.highlightTimeout) {
+            clearTimeout(Number(card.dataset.highlightTimeout));
+        }
+
+        const timeoutId = window.setTimeout(() => {
+            card.classList.remove('highlight');
+            card.style.borderColor = '';
+            card.style.boxShadow = '';
+            delete card.dataset.highlightTimeout;
+        }, 2000);
+        card.dataset.highlightTimeout = String(timeoutId);
+
+        return true;
+    }
+
+    function setFilter(filterValue) {
+        currentFilter = filterValue;
+        filterButtons.forEach(btn => {
+            const isActive = btn.getAttribute('data-filter') === filterValue;
+            btn.classList.toggle('active', isActive);
+        });
+        renderProjects();
+    }
+
+    function handleHashNavigation({ forceScroll = false } = {}) {
+        const hash = window.location.hash.slice(1);
+        if (!hash) {
+            return;
+        }
+
+        const projectExists = projects.some(project => project.id === hash);
+        if (!projectExists) {
+            return;
+        }
+
+        const navigated = scrollToProject(hash, { forceScroll });
+        if (!navigated) {
+            pendingHashNavigation = hash;
+            if (currentFilter !== 'all') {
+                setFilter('all');
+            } else {
+                renderProjects();
+            }
+        } else {
+            pendingHashNavigation = null;
+        }
+    }
+
     // Filter button event listeners
     filterButtons.forEach(button => {
         button.addEventListener('click', () => {
-            // Update active state
-            filterButtons.forEach(btn => btn.classList.remove('active'));
-            button.classList.add('active');
-
-            // Update current filter
-            currentFilter = button.getAttribute('data-filter');
-            renderProjects();
+            const filterValue = button.getAttribute('data-filter');
+            setFilter(filterValue);
         });
     });
 
     // Initialize
     loadProjects();
+    window.addEventListener('hashchange', () => handleHashNavigation({ forceScroll: true }));
 });
