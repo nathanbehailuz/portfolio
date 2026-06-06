@@ -4,7 +4,7 @@
     <meta charset="utf-8"/>
     <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
     <title>Nathan Behailu</title>
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cdefs%3E%3ClinearGradient id='arrowGrad' x1='0' y1='0' x2='1' y2='0'%3E%3Cstop offset='0%25' stop-color='%2322d3ee'/%3E%3Cstop offset='100%25' stop-color='%23a78bfa'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cstyle%3E.arrow%7Bfont:700 24px/1 ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;fill:url(%23arrowGrad)%7D%3C/style%3E%3Ctext class='arrow' x='16' y='22' text-anchor='middle'%3E%26gt;%3C/text%3E%3C/svg%3E"/>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='monospace' font-size='18' font-weight='700' fill='%23888888'%3E%26gt;%3C/text%3E%3C/svg%3E"/>
     <link href="https://fonts.googleapis.com" rel="preconnect"/>
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&amp;display=swap" rel="stylesheet"/>
@@ -18,12 +18,12 @@
             <nav class="flex justify-end items-center text-sm px-6 sm:px-8 py-6">
                 <div class="flex items-center space-x-4">
                     <div class="space-x-4">
-                        <a class="hover:text-cyan-400 transition-colors text-gray-300" href="#experience">Experience</a>
-                        <a class="hover:text-emerald-400 transition-colors text-gray-300" href="projects.html">Projects</a>
-                        <a class="hover:text-amber-400 transition-colors text-gray-300" href="#resume">Resume</a>
+                        <a class="nav-link" href="#experience">Experience</a>
+                        <a class="nav-link" href="projects.html">Projects</a>
+                        <a class="nav-link" href="#resume">Resume</a>
                     </div>
-                    <button id="theme-toggle" class="w-10 h-10 flex items-center justify-center rounded-lg bg-gradient-to-r from-gray-700 to-gray-600 hover:from-gray-600 hover:to-gray-500 transition-all duration-300 shadow-lg ml-4">
-                        <i class="fas fa-sun text-yellow-400" id="theme-icon"></i>
+                    <button id="theme-toggle" class="w-10 h-10 flex items-center justify-center rounded-none ml-4">
+                        <i class="fas fa-sun" id="theme-icon"></i>
                     </button>
                 </div>
             </nav>
@@ -33,15 +33,15 @@
             <aside class="w-1/4 pt-2">
                 <div class="sticky top-24">
                     <div class="mb-6">
-                        <img src="images/pp.JPG" alt="Nathan Profile Picture" class="w-16 h-16 rounded-lg object-cover border-2 border-cyan-400 mb-2 shadow-lg shadow-cyan-400/20"/>
+                        <img src="images/pp.JPG" alt="Nathan Profile Picture" class="w-16 h-16 object-cover border border-[#2a2a2a] mb-2"/>
                         <h1 class="text-xl font-bold text-white">Nathan Behailu</h1>
                     </div>
                     <ul class="space-y-3 text-sm text-[#A0A0A0]">
-                        <li><a class="hover:text-white flex items-center space-x-2 group" href="#"><i class="fas fa-university w-4 text-blue-400 group-hover:text-blue-300"></i><span>New York University</span></a></li>
-                        <li><a class="hover:text-white flex items-center space-x-2 group" href="mailto:nz2212@nyu.edu"><i class="fas fa-envelope w-4 text-yellow-400 group-hover:text-yellow-300"></i><span>nz2212@nyu.edu</span></a></li>
-                        <li><a class="hover:text-white flex items-center space-x-2 group" href="https://www.linkedin.com/in/nathan-behailu/"><i class="fab fa-linkedin w-4 text-blue-500 group-hover:text-blue-400"></i><span>LinkedIn</span></a></li>
-                        <li><a class="hover:text-white flex items-center space-x-2 group" href="https://github.com/nathanbehailuz"><i class="fab fa-github w-4 text-gray-300 group-hover:text-white"></i><span>GitHub</span></a></li>
-                        <li><a class="hover:text-white flex items-center space-x-2 group" href="https://www.instagram.com/natebehailu/"><i class="fab fa-instagram w-4 text-pink-500 group-hover:text-pink-400"></i><span>Instagram</span></a></li>
+                        <li><a class="sidebar-link flex items-center space-x-2" href="#"><i class="fas fa-university w-4"></i><span>New York University</span></a></li>
+                        <li><a class="sidebar-link flex items-center space-x-2" href="mailto:nz2212@nyu.edu"><i class="fas fa-envelope w-4"></i><span>nz2212@nyu.edu</span></a></li>
+                        <li><a class="sidebar-link flex items-center space-x-2" href="https://www.linkedin.com/in/nathan-behailu/"><i class="fab fa-linkedin w-4"></i><span>LinkedIn</span></a></li>
+                        <li><a class="sidebar-link flex items-center space-x-2" href="https://github.com/nathanbehailuz"><i class="fab fa-github w-4"></i><span>GitHub</span></a></li>
+                        <li><a class="sidebar-link flex items-center space-x-2" href="https://www.instagram.com/natebehailu/"><i class="fab fa-instagram w-4"></i><span>Instagram</span></a></li>
                     </ul>
                 </div>
             </aside>
@@ -50,19 +50,18 @@
                 <div class="max-w-4xl mx-auto">
                     <section class="mb-12" id="about">
                         <div class="text-2xl font-bold mb-4">
-                            <span class="text-white"></span>
-                            <span id="rotating-text" class="inline-block transition-all duration-500 ease-in-out"></span>
+                            <span id="rotating-text" class="inline-block transition-opacity duration-500 ease-in-out text-white"></span>
                         </div>
-                        <p class="text-[#A0A0A0] leading-relaxed mb-4">Hi, I'm Nathan, a senior at NYU Abu Dhabi, studying Computer Science and Mathematics. I enjoy building things that lie at the intersection of <i>software engineering</i> and <i>machine learning</i>.</p>
+                        <p class="text-[#A0A0A0] leading-relaxed mb-4">Hi, I'm Nathan, a senior at NYU Abu Dhabi, studying Computer Science and Mathematics. I enjoy building things that lie at the intersection of software engineering and machine learning.</p>
                     </section>
 
                     <section class="mb-12" id="experience">
-                        <h2 class="text-lg font-bold text-white mb-6 flex items-center"><span class="w-1 h-6 bg-gradient-to-b from-cyan-400 to-blue-500 mr-3 rounded"></span>Experience</h2>
+                        <h2 class="section-heading">Experience</h2>
                         <div class="space-y-4">
                             <div>
                                 <div class="flex justify-between items-center">
                                     <h3 class="text-lg text-white">Builder | R&D Venture Studio</h3>
-                                    <p class="text-sm text-[#A0A0A0]">Sept 25 - present</p>
+                                    <p class="text-sm text-[#888888]">Sept 25 - present</p>
                                 </div>
                                 <div class="pt-2 pl-4">
                                     <p class="text-sm text-[#A0A0A0] mb-2">Building MVPs, collaborating on product development, and supporting early-stage spinouts.</p>
@@ -71,7 +70,7 @@
                             <div>
                                 <div class="flex justify-between items-center">
                                     <h3 class="text-lg text-white">Federated Learning Researcher | MOMA Lab</h3>
-                                    <p class="text-sm text-[#A0A0A0]">May 2025 - Jul 2025</p>
+                                    <p class="text-sm text-[#888888]">May 2025 - Jul 2025</p>
                                 </div>
                                 <div class="pt-2 pl-4">
                                     <p class="text-sm text-[#A0A0A0] mb-2">Engineered a framework for a single client to audit server fairness with 93% accuracy and quantified the fairness degradation caused by federated unlearning.</p>
@@ -80,7 +79,7 @@
                             <div>
                                 <div class="flex justify-between items-center">
                                     <h3 class="text-lg text-white">Data Science Intern | NYUAD Social Science</h3>
-                                    <p class="text-sm text-[#A0A0A0]">Jan 2024 - May 2025</p>
+                                    <p class="text-sm text-[#888888]">Jan 2024 - May 2025</p>
                                 </div>
                                 <div class="pt-2 pl-4">
                                     <p class="text-sm text-[#A0A0A0] mb-2">Built an LLM-powered data pipeline to process 2M+ records from 40k images, slashing character error rates by 70% and boosting name accuracy by 85%.</p>
@@ -89,7 +88,7 @@
                             <div>
                                 <div class="flex justify-between items-center">
                                     <h3 class="text-lg text-white">Machine Learning Researcher | Center for Responsible AI</h3>
-                                    <p class="text-sm text-[#A0A0A0]">Sep 2024 - Feb 2025</p>
+                                    <p class="text-sm text-[#888888]">Sep 2024 - Feb 2025</p>
                                 </div>
                                 <div class="pt-2 pl-4">
                                     <p class="text-sm text-[#A0A0A0] mb-2">Developed a novel search algorithm to find fair classification thresholds 10x faster, successfully mitigating demographic bias with only a 2% impact on model accuracy.</p>
@@ -99,105 +98,88 @@
                     </section>
                     
                     <section id="projects" class="mb-12">
-                        <br>    
-                        <h2 class="text-lg font-bold text-white mb-6 flex items-center"><span class="w-1 h-6 bg-gradient-to-b from-emerald-400 to-green-500 mr-3 rounded"></span>Projects</h2>
+                        <h2 class="section-heading">Projects</h2>
                         <div class="space-y-4"> 
                             <div>
                                 <h3 class="text-lg text-white mb-2 flex items-center">
-                                    <span class="project-icon autovert-icon mr-3 text-green-400 hover:text-green-300 transition-colors cursor-pointer" title="Click to animate!">
+                                    <span class="project-icon autovert-icon mr-3 cursor-pointer" title="Click to animate!">
                                         <i class="fas fa-car"></i>
                                     </span>
-                                    <a class="text-indigo-400 hover:text-indigo-300 transition-colors" href="projects.html#autovert">AutoVert</a>
+                                    <a class="project-link" href="projects.html#autovert">AutoVert</a>
                                 </h3>
                                 <div class="pt-2 pl-4">
                                     <p class="text-sm text-[#A0A0A0] mb-2">Led a team of 4 to build an AI-powered iOS app that provides vehicle diagnostics with 90% accuracy and repair estimates that save users an average of 15%.</p>
-                                    <p class="text-xs text-cyan-400">Flutter, Firebase, OpenAI GPT-4, Gemini AI, Google Cloud</p>
+                                    <p class="tech-tags">Flutter, Firebase, OpenAI GPT-4, Gemini AI, Google Cloud</p>
                                 </div>
                             </div>
                             <div>
                                 <h3 class="text-lg text-white mb-2 flex items-center">
-                                    <span class="project-icon cliquepix-icon mr-3 text-blue-400 hover:text-blue-300 transition-colors cursor-pointer" title="Click to animate!">
+                                    <span class="project-icon cliquepix-icon mr-3 cursor-pointer" title="Click to animate!">
                                         <i class="fas fa-images"></i>
                                     </span>
-                                    <a class="text-emerald-400 hover:text-emerald-300 transition-colors" href="projects.html#cliquepix">CliquePix</a>
+                                    <a class="project-link" href="projects.html#cliquepix">CliquePix</a>
                                 </h3>
                                 <div class="pt-2 pl-4">
                                     <p class="text-sm text-[#A0A0A0] mb-2">Developed a privacy-first photo-sharing web platform with granular permissions and a client-side facial recognition search that reduced media search time by 90%.</p>
-                                    <p class="text-xs text-cyan-400">Node.js, MongoDB, TensorFlow.js, Handlebars</p>
+                                    <p class="tech-tags">Node.js, MongoDB, TensorFlow.js, Handlebars</p>
                                 </div>
                             </div>
                             <div>
                                 <h3 class="text-lg text-white mb-2 flex items-center">
-                                    <span class="project-icon flappybird-icon mr-3 text-yellow-400 hover:text-yellow-300 transition-colors cursor-pointer" title="Click to animate!">
+                                    <span class="project-icon flappybird-icon mr-3 cursor-pointer" title="Click to animate!">
                                         <i class="fas fa-gamepad"></i>
                                     </span>
-                                    <a class="text-amber-400 hover:text-amber-300 transition-colors" href="projects.html#flappybird">AI Plays Flappy Bird</a>
+                                    <a class="project-link" href="projects.html#flappybird">AI Plays Flappy Bird</a>
                                 </h3>
                                 <div class="pt-2 pl-4">
                                     <p class="text-sm text-[#A0A0A0] mb-2">Trained an AI agent using the NEAT reinforcement learning algorithm to master Flappy Bird, increasing its average score from 0 to over 30 within 50 generations.</p>
-                                    <p class="text-xs text-cyan-400">Reinforcement Learning, Neural Networks, Pygame</p>
+                                    <p class="tech-tags">Reinforcement Learning, Neural Networks, Pygame</p>
                                 </div>
                             </div>
                             <div>
                                 <h3 class="text-lg text-white mb-2 flex items-center">
-                                    <span class="project-icon insider-icon mr-3 text-purple-400 hover:text-purple-300 transition-colors cursor-pointer" title="Click to animate!">
+                                    <span class="project-icon insider-icon mr-3 cursor-pointer" title="Click to animate!">
                                         <i class="fas fa-chart-line"></i>
                                     </span>
-                                    <a class="text-pink-400 hover:text-pink-300 transition-colors" href="projects.html#insider-index">The Insider Index</a>
+                                    <a class="project-link" href="projects.html#insider-index">The Insider Index</a>
                                 </h3>
                                 <div class="pt-2 pl-4">
                                     <p class="text-sm text-[#A0A0A0] mb-2">Deployed an end-to-end platform that processes 1,000+ daily SEC filings to generate insider trading signals, achieving a 5% alpha over market benchmarks in backtests.</p>
-                                    <p class="text-xs text-cyan-400">Python, LightGBM, FastAPI, React</p>
+                                    <p class="tech-tags">Python, LightGBM, FastAPI, React</p>
                                 </div>
                             </div>
                         </div>
-                        <br>
-                        <p class="text-sm text-[#A0A0A0] mb-6"> To see more, visit <a class="text-emerald-400 hover:text-emerald-300 transition-colors" href="projects.html">projects page</a></p>
-
+                        <p class="text-sm text-[#A0A0A0] mt-6">To see more, visit the <a class="project-link" href="projects.html">projects page</a>.</p>
                     </section>
                     
                     <section id="skills" class="mb-12">
-                        <h2 class="text-lg font-bold text-white mb-6 flex items-center"><span class="w-1 h-6 bg-gradient-to-b from-purple-400 to-pink-500 mr-3 rounded"></span>Skills</h2>
+                        <h2 class="section-heading">Skills</h2>
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                             <div class="space-y-4">
                                 <div>
-                                    <h3 class="text-sm font-semibold text-white mb-2 flex items-center">
-                                        <i class="fas fa-code w-4 text-blue-400 mr-2"></i>Languages
-                                    </h3>
+                                    <h3 class="text-sm font-semibold text-white mb-2">Languages</h3>
                                     <p class="text-sm text-[#A0A0A0]">C/C++, JavaScript, Python, HTML/CSS, Dart</p>
                                 </div>
                                 <div>
-                                    <h3 class="text-sm font-semibold text-white mb-2 flex items-center">
-                                        <i class="fas fa-globe w-4 text-green-400 mr-2"></i>Web Development
-                                    </h3>
+                                    <h3 class="text-sm font-semibold text-white mb-2">Web Development</h3>
                                     <p class="text-sm text-[#A0A0A0]">Mongoose, React.js, Node.js, Express.js, Next.js (MERN), Tailwind, Shadcn</p>
                                 </div>
                                 <div>
-                                    <h3 class="text-sm font-semibold text-white mb-2 flex items-center">
-                                        <i class="fas fa-mobile-alt w-4 text-purple-400 mr-2"></i>App Development
-                                    </h3>
+                                    <h3 class="text-sm font-semibold text-white mb-2">App Development</h3>
                                     <p class="text-sm text-[#A0A0A0]">Flutter + Dart</p>
                                 </div>
                             </div>
                             <div class="space-y-4">
                                 <div>
-                                    <h3 class="text-sm font-semibold text-white mb-2 flex items-center">
-                                        <i class="fas fa-brain w-4 text-orange-400 mr-2"></i>Machine Learning
-                                    </h3>
+                                    <h3 class="text-sm font-semibold text-white mb-2">Machine Learning</h3>
                                     <p class="text-sm text-[#A0A0A0]">PyTorch, TensorFlow, Scikit-learn, Hugging Face, CUDA</p>
                                 </div>
-
                                 <div>
-                                    <h3 class="text-sm font-semibold text-white mb-2 flex items-center">
-                                        <i class="fas fa-database w-4 text-cyan-400 mr-2"></i>Databases
-                                    </h3>
+                                    <h3 class="text-sm font-semibold text-white mb-2">Databases</h3>
                                     <p class="text-sm text-[#A0A0A0]">SQL, MongoDB, Firestore</p>
                                 </div>
-                                
                                 <div>
-                                    <h3 class="text-sm font-semibold text-white mb-2 flex items-center">
-                                        <i class="fas fa-tools w-4 text-gray-400 mr-2"></i>Development Tools
-                                    </h3>
+                                    <h3 class="text-sm font-semibold text-white mb-2">Development Tools</h3>
                                     <p class="text-sm text-[#A0A0A0]">Git, VS Code, Jupyter Notebooks, Conda</p>
                                 </div>
                             </div>
@@ -208,9 +190,9 @@
         </div>
         
         <footer class="w-full mt-16 p-6 sm:p-8">
-            <div class="container mx-auto text-center text-xs text-gray-600">
+            <div class="container mx-auto text-center text-xs text-[#666666]">
                 <p>© 2025 Nathan Behailu. All Rights Reserved.</p>
-                <p class="mt-2">Design inspired by <a href="https://musicforprogramming.net/latest/" target="_blank" rel="noopener noreferrer" class="hover:text-gray-400 transition-colors">musicforprogramming.net</a></p>
+                <p class="mt-2">Design inspired by <a href="https://musicforprogramming.net/latest/" target="_blank" rel="noopener noreferrer" class="nav-link">musicforprogramming.net</a></p>
             </div>
         </footer>
     </div>

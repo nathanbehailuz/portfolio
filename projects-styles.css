@@ -1,140 +1,180 @@
 :root {
-    --primary-color: #4f46e5;
-    --accent-color: #06b6d4;
-    --highlight-color: #10b981;
-    --warning-color: #f59e0b;
+    --bg: #111111;
+    --text: #e0e0e0;
+    --text-muted: #888888;
+    --text-dim: #666666;
+    --border: #2a2a2a;
+    --border-hover: #444444;
+    --accent: #c8c8c8;
 }
 
 body {
     font-family: 'Roboto Mono', monospace;
-    background-color: #111111;
-    color: #E0E0E0;
+    background-color: var(--bg);
+    color: var(--text);
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 body.light-mode {
-    background-color: #f8fafc;
-    color: #1e293b;
+    --bg: #f5f5f0;
+    --text: #1a1a1a;
+    --text-muted: #555555;
+    --text-dim: #888888;
+    --border: #d4d4d4;
+    --border-hover: #999999;
+    --accent: #333333;
+    background-color: var(--bg);
+    color: var(--text);
 }
 
 body.light-mode .bg-\[#111111\] {
-    background-color: #f8fafc;
+    background-color: var(--bg);
 }
 
 body.light-mode #header {
-    background-color: #f8fafc;
+    background-color: var(--bg);
 }
 
 body.light-mode .text-\[#E0E0E0\] {
-    color: #1e293b;
+    color: var(--text);
 }
 
 body.light-mode .text-\[#A0A0A0\] {
-    color: #64748b;
+    color: var(--text-muted);
 }
 
 body.light-mode .text-white {
-    color: #1e293b;
+    color: var(--text);
 }
 
-body.light-mode .bg-gray-700 {
-    background-color: #e2e8f0;
+body.light-mode .text-\[#888888\] {
+    color: var(--text-muted);
 }
 
-body.light-mode .hover\:bg-gray-600:hover {
-    background-color: #cbd5e1;
+body.light-mode .border-\[#2a2a2a\] {
+    border-color: var(--border);
 }
 
-body.light-mode .bg-gray-900\/50 {
-    background-color: #f9fafb;
+body.light-mode .hover\:text-white:hover {
+    color: var(--text);
 }
 
-body.light-mode .border-gray-700 {
-    border-color: #e5e7eb;
+body.light-mode #theme-toggle {
+    background-color: #ebebeb;
+    border-color: var(--border);
 }
 
-body.light-mode .hover\:border-cyan-400\/50:hover {
-    border-color: #06b6d4;
-}
-
-body.light-mode .hover\:border-emerald-400\/50:hover {
-    border-color: #10b981;
-}
-
-body.light-mode .hover\:border-amber-400\/50:hover {
-    border-color: #f59e0b;
-}
-
-body.light-mode .hover\:border-pink-400\/50:hover {
-    border-color: #ec4899;
+body.light-mode #theme-toggle:hover {
+    border-color: var(--border-hover);
 }
 
 body.light-mode .filter-btn {
-    background-color: transparent;
-    color: #475569;
-    border-color: #cbd5e1;
+    color: var(--text-muted);
+    border-color: var(--border);
 }
 
 body.light-mode .filter-btn:hover {
-    background-color: transparent;
-    color: #334155;
+    color: var(--text);
+    border-color: var(--border-hover);
 }
 
 body.light-mode .filter-btn.active {
-    background-color: transparent;
-    color: #10b981;
-    border-color: #10b981;
+    color: var(--text);
+    border-color: var(--text);
 }
 
 body.light-mode .project-card {
-    background-color: transparent;
-    border-color: #cbd5e1;
+    border-color: var(--border);
 }
 
-body.light-mode .project-card:hover {
-    border-color: #10b981;
+body.light-mode .project-card:hover,
+body.light-mode .project-card.highlight {
+    border-color: var(--border-hover);
+    background-color: rgba(0, 0, 0, 0.03);
 }
 
 html {
-    scroll-padding-top: 6rem; /* Account for fixed header height */
+    scroll-padding-top: 6rem;
 }
 
-/* Filter Button Styles */
-.filter-btn {
-    padding: 12px 20px;
-    border-radius: 8px;
+.section-heading {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 1.5rem;
+}
+
+.nav-link {
+    color: var(--text-muted);
+    transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+    color: var(--text);
+}
+
+.sidebar-link {
+    color: var(--text-muted);
+    transition: color 0.2s ease;
+}
+
+.sidebar-link:hover {
+    color: var(--text);
+}
+
+.sidebar-link i {
+    color: var(--text-dim);
+}
+
+#theme-toggle {
     background-color: transparent;
-    color: #d1d5db;
-    border: 2px solid #374151;
+    border: 1px solid var(--border);
+    transition: border-color 0.2s ease;
+}
+
+#theme-toggle:hover {
+    border-color: var(--border-hover);
+}
+
+#theme-icon {
+    color: var(--text-muted);
+}
+
+.filter-btn {
+    padding: 8px 16px;
+    border-radius: 0;
+    background-color: transparent;
+    color: var(--text-muted);
+    border: 1px solid var(--border);
     cursor: pointer;
-    transition: all 0.3s ease;
-    font-size: 14px;
-    font-weight: 500;
+    transition: color 0.2s ease, border-color 0.2s ease;
+    font-size: 13px;
+    font-weight: 400;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .filter-btn:hover {
-    background-color: transparent;
-    color: white;
-    border-color: #4b5563;
+    color: var(--text);
+    border-color: var(--border-hover);
 }
 
 .filter-btn.active {
-    background-color: transparent;
-    color: #10b981;
-    border-color: #10b981;
-    box-shadow: none;
+    color: var(--text);
+    border-color: var(--text);
 }
 
-/* Project Card Styles */
 .project-card {
     background-color: transparent;
-    border: 1px solid #374151;
-    border-radius: 12px;
+    border: 1px solid var(--border);
+    border-radius: 0;
     padding: 24px;
-    transition: all 0.3s ease;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
     display: flex;
     flex-direction: row;
     gap: 24px;
@@ -143,39 +183,36 @@ html {
 }
 
 .project-card.highlight {
-    background-color: rgba(148, 163, 184, 0.08);
-}
-
-body.light-mode .project-card.highlight {
-    background-color: rgba(14, 165, 233, 0.12);
+    border-color: var(--border-hover);
+    background-color: rgba(255, 255, 255, 0.03);
 }
 
 .project-card:hover {
-    border-color: #10b981;
-    transform: translateY(-2px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    border-color: var(--border-hover);
+    background-color: rgba(255, 255, 255, 0.02);
 }
-
-/* Project card images removed */
 
 .project-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 8px;
+    gap: 6px;
     margin-bottom: 16px;
 }
 
 .project-tag {
-    padding: 4px 12px;
-    border-radius: 16px;
-    font-size: 12px;
-    font-weight: 500;
+    padding: 2px 8px;
+    border: 1px solid var(--border);
+    border-radius: 0;
+    font-size: 11px;
+    font-weight: 400;
+    color: var(--text-dim);
+    letter-spacing: 0.02em;
 }
 
 .project-actions {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 8px;
     flex-shrink: 0;
     margin-top: 40px;
 }
@@ -185,49 +222,34 @@ body.light-mode .project-card.highlight {
     align-items: center;
     justify-content: center;
     gap: 8px;
-    padding: 10px 16px;
-    border-radius: 8px;
+    padding: 8px 14px;
+    border-radius: 0;
     text-decoration: none;
-    font-size: 14px;
-    font-weight: 500;
-    transition: all 0.3s ease;
-    min-width: 120px;
-}
-
-.project-action.github {
+    font-size: 13px;
+    font-weight: 400;
+    transition: color 0.2s ease, border-color 0.2s ease;
+    min-width: 110px;
     background-color: transparent;
-    color: #9ca3af;
-    border: 1px solid #374151;
+    color: var(--text-muted);
+    border: 1px solid var(--border);
 }
 
-.project-action.github:hover {
-    background-color: transparent;
-    color: #d1d5db;
-    border-color: #4b5563;
+.project-action:hover {
+    color: var(--text);
+    border-color: var(--border-hover);
 }
 
-.project-action.demo {
-    background-color: transparent;
-    color: #dc2626;
-    border: 1px solid #dc2626;
+.project-title-link {
+    color: var(--text);
+    text-decoration: none;
+    transition: text-decoration-color 0.2s ease;
 }
 
-.project-action.demo:hover {
-    background-color: transparent;
-    color: #ef4444;
-    border-color: #ef4444;
+.project-title-link:hover {
+    text-decoration: underline;
+    text-underline-offset: 3px;
 }
 
-.project-action.try-it {
-    background-color: transparent;
-    color: #2563eb;
-    border: 1px solid #2563eb;
+.project-title-link i {
+    color: var(--text-dim);
 }
-
-.project-action.try-it:hover {
-    background-color: transparent;
-    color: #3b82f6;
-    border-color: #3b82f6;
-}
-
-/* Fall-in animations removed */

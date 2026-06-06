@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Apply the saved theme
     if (currentTheme === 'light') {
         body.classList.add('light-mode');
-        themeIcon.className = 'fas fa-moon text-blue-600';
+        themeIcon.className = 'fas fa-moon';
     }
     
     // Fall-in animations removed
@@ -19,12 +19,12 @@ document.addEventListener('DOMContentLoaded', function() {
         if (body.classList.contains('light-mode')) {
             // Switch to dark mode
             body.classList.remove('light-mode');
-            themeIcon.className = 'fas fa-sun text-yellow-400';
+            themeIcon.className = 'fas fa-sun';
             localStorage.setItem('theme', 'dark');
         } else {
             // Switch to light mode
             body.classList.add('light-mode');
-            themeIcon.className = 'fas fa-moon text-blue-600';
+            themeIcon.className = 'fas fa-moon';
             localStorage.setItem('theme', 'light');
         }
     });
@@ -32,24 +32,26 @@ document.addEventListener('DOMContentLoaded', function() {
     // Rotating text animation
     const rotatingText = document.getElementById('rotating-text');
     if (rotatingText) {
-        const roles = [
-            { text: 'CS Student', color: 'text-cyan-400' },
-            { text: 'AI Researcher', color: 'text-emerald-400' },
-            { text: 'Software Engineer', color: 'text-amber-400' }
-        ];
+        const roles = ['CS Student', 'AI Researcher', 'Software Engineer'];
         
         let currentIndex = 0;
         
-        function updateText() {
-            const currentRole = roles[currentIndex];
-            rotatingText.textContent = currentRole.text;
-            rotatingText.className = `inline-block transition-all duration-500 ease-in-out ${currentRole.color}`;
-            currentIndex = (currentIndex + 1) % roles.length;
+        function updateText(fade = true) {
+            if (fade) {
+                rotatingText.style.opacity = '0';
+                setTimeout(() => {
+                    rotatingText.textContent = roles[currentIndex];
+                    rotatingText.style.opacity = '1';
+                    currentIndex = (currentIndex + 1) % roles.length;
+                }, 250);
+            } else {
+                rotatingText.textContent = roles[currentIndex];
+                currentIndex = (currentIndex + 1) % roles.length;
+            }
         }
         
-        // Start the animation
-        updateText();
-        setInterval(updateText, 2000); // Change every 2 seconds
+        updateText(false);
+        setInterval(() => updateText(true), 2000);
     }
     
     // Project icon click animations
