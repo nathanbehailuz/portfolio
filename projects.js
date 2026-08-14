@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const projectsGrid = document.getElementById('projectsGrid');
     const filterButtons = document.querySelectorAll('.filter-btn');
     let projects = [];
-    let currentFilter = 'all';
+    let currentFilter = null;
     const filterMapping = {
         'websites': 'Web',
         'ml': 'ML',
@@ -12,7 +12,9 @@ document.addEventListener('DOMContentLoaded', function() {
     };
     let pendingHashNavigation = null;
 
-    // Load projects from JSON
+    const inactiveBtnClasses = ['border-outline-variant', 'text-on-surface-variant'];
+    const activeBtnClasses = ['border-primary', 'text-primary'];
+
     async function loadProjects() {
         try {
             const response = await fetch('projects.json');
@@ -25,27 +27,22 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Render projects based on current filter
     function renderProjects() {
         let filteredProjects = projects;
 
-        // Apply category filter
-        if (currentFilter !== 'all') {
+        if (currentFilter) {
             const targetTag = filterMapping[currentFilter];
             if (targetTag) {
-                filteredProjects = filteredProjects.filter(project =>
+                filteredProjects = projects.filter(project =>
                     project.tags.includes(targetTag)
                 );
             }
         }
 
-        // Clear grid
         projectsGrid.innerHTML = '';
 
-        // Render filtered projects
-        filteredProjects.forEach((project, index) => {
-            const projectCard = createProjectCard(project, index);
-            projectsGrid.appendChild(projectCard);
+        filteredProjects.forEach((project) => {
+            projectsGrid.appendChild(createProjectCard(project));
         });
 
         if (pendingHashNavigation) {
@@ -56,28 +53,28 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Create project card element
-    function createProjectCard(project, index) {
+    function createProjectCard(project) {
         const card = document.createElement('div');
         card.className = 'project-card';
         card.id = project.id;
+        card.setAttribute('data-accent', project.titleColor || 'text-primary');
 
         card.innerHTML = `
-            <div class="flex-1">
-                <h3 class="text-xl font-bold mb-3">
-                    <a href="#${project.id}" class="project-title-link inline-flex items-center gap-3">
-                        <i class="${project.icon} text-lg"></i>
+            <div class="flex-1 min-w-0">
+                <h3 class="font-body-md text-body-md font-semibold mb-3">
+                    <a href="#${project.id}" class="project-title-link inline-flex items-center gap-3 ${project.titleColor || 'text-primary'}">
+                        <i class="${project.icon} text-lg ${project.iconColor || ''}"></i>
                         <span>${project.name}</span>
                     </a>
                 </h3>
-                <ul class="text-[#A0A0A0] mb-4 leading-relaxed text-sm list-disc list-inside space-y-1">
+                <ul class="text-on-surface-variant mb-4 leading-relaxed font-body-sm text-body-sm list-disc list-inside space-y-1">
                     ${project.description.map(point => `<li>${point}</li>`).join('')}
                 </ul>
-                <div class="project-tags mb-4">
+                <div class="project-tags">
                     ${project.tools.map(tool => `<span class="project-tag">${tool}</span>`).join('')}
                 </div>
             </div>
-            <div class="project-actions flex flex-col gap-3">
+            <div class="project-actions">
                 <a href="${project.github_link}" class="project-action" target="_blank" rel="noopener noreferrer">
                     <i class="fab fa-github"></i>
                     <span>Code</span>
@@ -123,12 +120,35 @@ document.addEventListener('DOMContentLoaded', function() {
         return true;
     }
 
-    function setFilter(filterValue) {
-        currentFilter = filterValue;
-        filterButtons.forEach(btn => {
-            const isActive = btn.getAttribute('data-filter') === filterValue;
-            btn.classList.toggle('active', isActive);
+    function setFilterButtonState(button, isActive) {
+        inactiveBtnClasses.forEach((cls) => button.classList.remove(cls));
+        activeBtnClasses.forEach((cls) => button.classList.remove(cls));
+        button.classList.toggle('active', isActive);
+
+        if (isActive) {
+            activeBtnClasses.forEach((cls) => button.classList.add(cls));
+        } else {
+            inactiveBtnClasses.forEach((cls) => button.classList.add(cls));
+        }
+
+        button.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+    }
+
+    function updateFilterButtons() {
+        filterButtons.forEach((button) => {
+            setFilterButtonState(button, button.dataset.filter === currentFilter);
         });
+    }
+
+    function setFilter(filterValue) {
+        currentFilter = currentFilter === filterValue ? null : filterValue;
+        updateFilterButtons();
+        renderProjects();
+    }
+
+    function clearFilter() {
+        currentFilter = null;
+        updateFilterButtons();
         renderProjects();
     }
 
@@ -146,8 +166,8 @@ document.addEventListener('DOMContentLoaded', function() {
         const navigated = scrollToProject(hash, { forceScroll });
         if (!navigated) {
             pendingHashNavigation = hash;
-            if (currentFilter !== 'all') {
-                setFilter('all');
+            if (currentFilter) {
+                clearFilter();
             } else {
                 renderProjects();
             }
@@ -156,15 +176,12 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Filter button event listeners
-    filterButtons.forEach(button => {
+    filterButtons.forEach((button) => {
         button.addEventListener('click', () => {
-            const filterValue = button.getAttribute('data-filter');
-            setFilter(filterValue);
+            setFilter(button.dataset.filter);
         });
     });
 
-    // Initialize
     loadProjects();
     window.addEventListener('hashchange', () => handleHashNavigation({ forceScroll: true }));
 });

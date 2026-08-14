@@ -1,0 +1,108 @@
+{
+    "experiences": [
+      {
+        "title": "Builder (Software Engineer)",
+        "company_name": "Caisson Ventures",
+        "start_date": "Sep 2025",
+        "end_date": "Present",
+        "location": "Remote",
+        "description": [
+          "Bulit digital products for payer-specific dental claims and HVAC service automation, translating ambiguous problem statements into testable product workflows.",
+          "Partnered with internal stakeholders to scope features, user journeys, and data requirements, enabling simulated 80% first-pass claim readiness and 40% downtime reduction per incident.",
+          "Built full-stack prototypes using Next.js, FastAPI, and Supabase to support rapid iteration, market validation, and client-facing demos.",
+          "Developed rules-based workflow engines to automate documentation and dispatch logic, reducing manual assembly time by 50% in simulated operational environments."
+        ],
+        "tag": "professional",
+        "titleColor": "text-green-400",
+        "top_pick": true
+      },
+      {
+        "title": "Federated Learning Research Assistant",
+        "company_name": "New York University, MOMA Lab",
+        "start_date": "May 2025",
+        "end_date": "Jul 2025",
+        "location": "Abu Dhabi, UAE",
+        "description": [
+          "Conducted applied research to evaluate fairness and trust trade-offs in distributed AI systems, informing product-level decision-making under regulatory and ethical constraints.",
+          "Designed client-side evaluation frameworks to test system behavior across federated rounds, supporting data-driven assessment without centralized data access."
+        ],
+        "tag": "professional",
+        "titleColor": "text-blue-400",
+        "top_pick": true
+      },
+      {
+        "title": "Big Data Research Assistant",
+        "company_name": "New York University",
+        "start_date": "Jan 2024",
+        "end_date": "May 2025",
+        "location": "Abu Dhabi, UAE",
+        "description": [
+          "Built and maintained an end-to-end data pipeline converting 40,000+ scanned documents into 2M+ structured records to support downstream analysis and decision-making.",
+          "Improved data extraction accuracy by 70% through iterative model tuning and validation on historical datasets.",
+          "Implemented retrieval-augmented generation techniques to improve data quality and reduce manual review overhead by 15%."
+        ],
+        "tag": "professional",
+        "titleColor": "text-purple-400",
+        "top_pick": true
+      },
+      {
+        "title": "Machine Learning Research Assistant",
+        "company_name": "Center for Responsible AI at NYU",
+        "start_date": "Sep 2024",
+        "end_date": "Feb 2025",
+        "location": "NYC, USA",
+        "description": [
+          "Developed optimization frameworks balancing model performance and fairness, enabling principled trade-off analysis for real-world deployment scenarios.",
+          "Applied post-processing techniques to reduce demographic bias while limiting accuracy degradation to 2%.",
+          "Built reproducible evaluation pipelines using Scikit-learn and Fairlearn to support stakeholder-facing comparisons across demographic groups."
+        ],
+        "tag": "professional",
+        "titleColor": "text-orange-400",
+        "top_pick": true
+      },
+      {
+        "title": "Organizer | GDG Abu Dhabi",
+        "company_name": "Google Developer Groups",
+        "start_date": "Jul 2026",
+        "end_date": "Present",
+        "location": "Abu Dhabi, UAE",
+        "description": [
+          "Organize Google-led events for the UAE tech community, including hackathons, speaker talks, and networking sessions.",
+          "Collaborate with universities and guest speakers from tech companies to deliver technical programming for local developers.",
+          "Coordinate community events that connect students, professionals, and industry speakers across Abu Dhabi's tech ecosystem."
+        ],
+        "tag": "leadership & community",
+        "titleColor": "text-yellow-400",
+        "top_pick": false
+      },
+      {
+        "title": "Library & IT Committee Member | Student Government",
+        "company_name": "New York University Abu Dhabi",
+        "start_date": "Aug 2023",
+        "end_date": "May 2024",
+        "location": "Abu Dhabi, UAE",
+        "description": [
+          "Represented student interests in discussions on campus IT infrastructure, digital accessibility, and service reliability improvements.",
+          "Conducted vulnerability assessments, network traffic analysis, and malware monitoring; isolated phishing attempts and suspicious traffic, reducing security risks by 30%.",
+          "Mentored 600+ students through workshops on network optimization and responsible digital resource usage."
+        ],
+        "tag": "leadership & community",
+        "titleColor": "text-cyan-400",
+        "top_pick": false
+      },
+      {
+        "title": "Vice President | Quantum Association SIG",
+        "company_name": "New York University Abu Dhabi",
+        "start_date": "Aug 2023",
+        "end_date": "Jan 2024",
+        "location": "Abu Dhabi, UAE",
+        "description": [
+          "Led peer-learning initiatives on quantum computing fundamentals, facilitating discussions on quantum algorithms and emerging computational paradigms.",
+          "Collaborated across disciplines to foster research interest at the intersection of quantum systems and artificial intelligence."
+        ],
+        "tag": "leadership & community",
+        "titleColor": "text-pink-400",
+        "top_pick": false
+      }
+    ]
+  }

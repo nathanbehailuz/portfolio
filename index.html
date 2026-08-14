@@ -1,202 +1,366 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-    <title>Nathan Behailu</title>
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ctext x='16' y='22' text-anchor='middle' font-family='monospace' font-size='18' font-weight='700' fill='%23888888'%3E%26gt;%3C/text%3E%3C/svg%3E"/>
-    <link href="https://fonts.googleapis.com" rel="preconnect"/>
-    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&amp;display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link rel="stylesheet" href="styles.css"/>
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Nathan Behailu - Software Engineer & Researcher</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script src="tailwind-config.js"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="styles.css">
 </head>
-<body class="bg-[#111111] text-[#E0E0E0]">
-    <div class="min-h-screen flex flex-col">
-        <header class="w-full fixed top-0 left-0 bg-[#111111] z-10 transition-colors duration-300" id="header">
-            <nav class="flex justify-end items-center text-sm px-6 sm:px-8 py-6">
-                <div class="flex items-center space-x-4">
-                    <div class="space-x-4">
-                        <a class="nav-link" href="#experience">Experience</a>
-                        <a class="nav-link" href="projects.html">Projects</a>
-                        <a class="nav-link" href="#resume">Resume</a>
-                    </div>
-                    <button id="theme-toggle" class="w-10 h-10 flex items-center justify-center rounded-none ml-4">
-                        <i class="fas fa-sun" id="theme-icon"></i>
-                    </button>
-                </div>
-            </nav>
-        </header>
-        
-        <div class="flex flex-grow container mx-auto px-6 sm:px-8 pt-24">
-            <aside class="w-1/4 pt-2">
-                <div class="sticky top-24">
-                    <div class="mb-6">
-                        <img src="images/pp.JPG" alt="Nathan Profile Picture" class="w-16 h-16 object-cover border border-[#2a2a2a] mb-2"/>
-                        <h1 class="text-xl font-bold text-white">Nathan Behailu</h1>
-                    </div>
-                    <ul class="space-y-3 text-sm text-[#A0A0A0]">
-                        <li><a class="sidebar-link flex items-center space-x-2" href="#"><i class="fas fa-university w-4"></i><span>New York University</span></a></li>
-                        <li><a class="sidebar-link flex items-center space-x-2" href="mailto:nz2212@nyu.edu"><i class="fas fa-envelope w-4"></i><span>nz2212@nyu.edu</span></a></li>
-                        <li><a class="sidebar-link flex items-center space-x-2" href="https://www.linkedin.com/in/nathan-behailu/"><i class="fab fa-linkedin w-4"></i><span>LinkedIn</span></a></li>
-                        <li><a class="sidebar-link flex items-center space-x-2" href="https://github.com/nathanbehailuz"><i class="fab fa-github w-4"></i><span>GitHub</span></a></li>
-                        <li><a class="sidebar-link flex items-center space-x-2" href="https://www.instagram.com/natebehailu/"><i class="fab fa-instagram w-4"></i><span>Instagram</span></a></li>
-                    </ul>
-                </div>
-            </aside>
-            
-            <main class="w-3/4 py-10 pl-4 pr-16">
-                <div class="max-w-4xl mx-auto">
-                    <section class="mb-12" id="about">
-                        <div class="text-2xl font-bold mb-4">
-                            <span id="rotating-text" class="inline-block transition-opacity duration-500 ease-in-out text-white"></span>
-                        </div>
-                        <p class="text-[#A0A0A0] leading-relaxed mb-4">Hi, I'm Nathan, a senior at NYU Abu Dhabi, studying Computer Science and Mathematics. I enjoy building things that lie at the intersection of software engineering and machine learning.</p>
-                    </section>
+<body class="bg-background text-primary pt-24 pb-section-gap min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<header class="bg-background/80 backdrop-blur-md fixed top-0 w-full z-50 border-b border-border-subtle transition-all duration-200 ease-in-out">
+<div class="flex justify-between items-center h-16 px-margin-mobile md:px-gutter max-w-container-max mx-auto">
+<a class="hover:opacity-80 transition-opacity flex items-center" href="index.html" aria-label="Nathan Behailu">
+<img src="images/nathan.svg" alt="Nathan Behailu" class="h-6 w-auto brightness-0 invert">
+</a>
+<nav class="hidden md:flex gap-6 font-mono-label text-mono-label">
+<a class="text-primary transition-colors" href="index.html">Home</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="experiences.html">Experience</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="projects.html">Projects</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Resume</a>
+</nav>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</header>
+<main class="flex-grow max-w-container-max mx-auto px-margin-mobile md:px-gutter w-full">
+<!-- Hero Section -->
+<section class="py-section-gap flex flex-col md:flex-row gap-8 items-start border-b border-border-subtle">
+<div class="w-32 h-32 md:w-48 md:h-48 shrink-0 overflow-hidden border border-border-subtle rounded-DEFAULT bg-surface-container md:mt-16">
+<img alt="Nathan Behailu Profile" class="w-full h-full object-cover" src="images/pp.JPG">
+</div>
+<div class="flex-1">
+<img src="images/nathan_behailu.svg" alt="Nathan Behailu" class="h-20 w-auto mb-2 brightness-0 invert">
+<p class="font-mono-label text-mono-label text-on-surface-variant mb-6">Software Engineer & Researcher</p>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mb-8 leading-relaxed">
+                    Hi, I'm Nathan, a Computer Science and Applied Mathematics graduate from NYU Abu Dhabi. I build full-stack products and applied ML systems, turning problems or technical curiosities into research projects or shipped software.
+                </p>
+<div class="flex flex-wrap gap-4 font-mono-sm text-mono-sm">
+<a class="flex items-center gap-2 text-on-surface-variant hover:text-primary transition-colors" href="mailto:nz2212@nyu.edu">
+<span class="material-symbols-outlined text-[16px]">mail</span> nz2212@nyu.edu
+                    </a>
+<a class="flex items-center gap-2 text-on-surface-variant hover:text-primary transition-colors" href="https://www.linkedin.com/in/nathan-behailu/" target="_blank">
+<svg class="w-[16px] h-[16px] fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg> LinkedIn
+                    </a>
+<a class="flex items-center gap-2 text-on-surface-variant hover:text-primary transition-colors" href="https://github.com/nathanbehailuz" target="_blank">
+<svg class="w-[16px] h-[16px] fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"></path></svg> GitHub
+                    </a>
+</div>
+</div>
+</section>
+<!-- Experience Section -->
+<section class="py-section-gap border-b border-border-subtle relative" id="experience">
+<div class="border-b border-border-subtle mb-8 pb-4 flex justify-between items-end"><h2 class="font-mono-sm text-mono-sm text-on-surface-variant uppercase tracking-widest">Experience</h2><a class="font-mono-sm text-mono-sm text-on-surface-variant hover:text-primary transition-colors flex items-center gap-1" href="experiences.html">View All <span class="material-symbols-outlined text-[14px]">arrow_forward</span></a></div>
+<div class="space-y-8 pl-4 border-l border-border-subtle relative" id="experience-container">
+</div>
+</section>
 
-                    <section class="mb-12" id="experience">
-                        <h2 class="section-heading">Experience</h2>
-                        <div class="space-y-4">
-                            <div>
-                                <div class="flex justify-between items-center">
-                                    <h3 class="text-lg text-white">Builder | R&D Venture Studio</h3>
-                                    <p class="text-sm text-[#888888]">Sept 25 - present</p>
-                                </div>
-                                <div class="pt-2 pl-4">
-                                    <p class="text-sm text-[#A0A0A0] mb-2">Building MVPs, collaborating on product development, and supporting early-stage spinouts.</p>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="flex justify-between items-center">
-                                    <h3 class="text-lg text-white">Federated Learning Researcher | MOMA Lab</h3>
-                                    <p class="text-sm text-[#888888]">May 2025 - Jul 2025</p>
-                                </div>
-                                <div class="pt-2 pl-4">
-                                    <p class="text-sm text-[#A0A0A0] mb-2">Engineered a framework for a single client to audit server fairness with 93% accuracy and quantified the fairness degradation caused by federated unlearning.</p>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="flex justify-between items-center">
-                                    <h3 class="text-lg text-white">Data Science Intern | NYUAD Social Science</h3>
-                                    <p class="text-sm text-[#888888]">Jan 2024 - May 2025</p>
-                                </div>
-                                <div class="pt-2 pl-4">
-                                    <p class="text-sm text-[#A0A0A0] mb-2">Built an LLM-powered data pipeline to process 2M+ records from 40k images, slashing character error rates by 70% and boosting name accuracy by 85%.</p>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="flex justify-between items-center">
-                                    <h3 class="text-lg text-white">Machine Learning Researcher | Center for Responsible AI</h3>
-                                    <p class="text-sm text-[#888888]">Sep 2024 - Feb 2025</p>
-                                </div>
-                                <div class="pt-2 pl-4">
-                                    <p class="text-sm text-[#A0A0A0] mb-2">Developed a novel search algorithm to find fair classification thresholds 10x faster, successfully mitigating demographic bias with only a 2% impact on model accuracy.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                    
-                    <section id="projects" class="mb-12">
-                        <h2 class="section-heading">Projects</h2>
-                        <div class="space-y-4"> 
-                            <div>
-                                <h3 class="text-lg text-white mb-2 flex items-center">
-                                    <span class="project-icon autovert-icon mr-3 cursor-pointer" title="Click to animate!">
-                                        <i class="fas fa-car"></i>
-                                    </span>
-                                    <a class="project-link" href="projects.html#autovert">AutoVert</a>
-                                </h3>
-                                <div class="pt-2 pl-4">
-                                    <p class="text-sm text-[#A0A0A0] mb-2">Led a team of 4 to build an AI-powered iOS app that provides vehicle diagnostics with 90% accuracy and repair estimates that save users an average of 15%.</p>
-                                    <p class="tech-tags">Flutter, Firebase, OpenAI GPT-4, Gemini AI, Google Cloud</p>
-                                </div>
-                            </div>
-                            <div>
-                                <h3 class="text-lg text-white mb-2 flex items-center">
-                                    <span class="project-icon cliquepix-icon mr-3 cursor-pointer" title="Click to animate!">
-                                        <i class="fas fa-images"></i>
-                                    </span>
-                                    <a class="project-link" href="projects.html#cliquepix">CliquePix</a>
-                                </h3>
-                                <div class="pt-2 pl-4">
-                                    <p class="text-sm text-[#A0A0A0] mb-2">Developed a privacy-first photo-sharing web platform with granular permissions and a client-side facial recognition search that reduced media search time by 90%.</p>
-                                    <p class="tech-tags">Node.js, MongoDB, TensorFlow.js, Handlebars</p>
-                                </div>
-                            </div>
-                            <div>
-                                <h3 class="text-lg text-white mb-2 flex items-center">
-                                    <span class="project-icon flappybird-icon mr-3 cursor-pointer" title="Click to animate!">
-                                        <i class="fas fa-gamepad"></i>
-                                    </span>
-                                    <a class="project-link" href="projects.html#flappybird">AI Plays Flappy Bird</a>
-                                </h3>
-                                <div class="pt-2 pl-4">
-                                    <p class="text-sm text-[#A0A0A0] mb-2">Trained an AI agent using the NEAT reinforcement learning algorithm to master Flappy Bird, increasing its average score from 0 to over 30 within 50 generations.</p>
-                                    <p class="tech-tags">Reinforcement Learning, Neural Networks, Pygame</p>
-                                </div>
-                            </div>
-                            <div>
-                                <h3 class="text-lg text-white mb-2 flex items-center">
-                                    <span class="project-icon insider-icon mr-3 cursor-pointer" title="Click to animate!">
-                                        <i class="fas fa-chart-line"></i>
-                                    </span>
-                                    <a class="project-link" href="projects.html#insider-index">The Insider Index</a>
-                                </h3>
-                                <div class="pt-2 pl-4">
-                                    <p class="text-sm text-[#A0A0A0] mb-2">Deployed an end-to-end platform that processes 1,000+ daily SEC filings to generate insider trading signals, achieving a 5% alpha over market benchmarks in backtests.</p>
-                                    <p class="tech-tags">Python, LightGBM, FastAPI, React</p>
-                                </div>
-                            </div>
-                        </div>
-                        <p class="text-sm text-[#A0A0A0] mt-6">To see more, visit the <a class="project-link" href="projects.html">projects page</a>.</p>
-                    </section>
-                    
-                    <section id="skills" class="mb-12">
-                        <h2 class="section-heading">Skills</h2>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div class="space-y-4">
-                                <div>
-                                    <h3 class="text-sm font-semibold text-white mb-2">Languages</h3>
-                                    <p class="text-sm text-[#A0A0A0]">C/C++, JavaScript, Python, HTML/CSS, Dart</p>
-                                </div>
-                                <div>
-                                    <h3 class="text-sm font-semibold text-white mb-2">Web Development</h3>
-                                    <p class="text-sm text-[#A0A0A0]">Mongoose, React.js, Node.js, Express.js, Next.js (MERN), Tailwind, Shadcn</p>
-                                </div>
-                                <div>
-                                    <h3 class="text-sm font-semibold text-white mb-2">App Development</h3>
-                                    <p class="text-sm text-[#A0A0A0]">Flutter + Dart</p>
-                                </div>
-                            </div>
-                            <div class="space-y-4">
-                                <div>
-                                    <h3 class="text-sm font-semibold text-white mb-2">Machine Learning</h3>
-                                    <p class="text-sm text-[#A0A0A0]">PyTorch, TensorFlow, Scikit-learn, Hugging Face, CUDA</p>
-                                </div>
-                                <div>
-                                    <h3 class="text-sm font-semibold text-white mb-2">Databases</h3>
-                                    <p class="text-sm text-[#A0A0A0]">SQL, MongoDB, Firestore</p>
-                                </div>
-                                <div>
-                                    <h3 class="text-sm font-semibold text-white mb-2">Development Tools</h3>
-                                    <p class="text-sm text-[#A0A0A0]">Git, VS Code, Jupyter Notebooks, Conda</p>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-                </div>
-            </main>
-        </div>
-        
-        <footer class="w-full mt-16 p-6 sm:p-8">
-            <div class="container mx-auto text-center text-xs text-[#666666]">
-                <p>© 2025 Nathan Behailu. All Rights Reserved.</p>
-                <p class="mt-2">Design inspired by <a href="https://musicforprogramming.net/latest/" target="_blank" rel="noopener noreferrer" class="nav-link">musicforprogramming.net</a></p>
-            </div>
-        </footer>
-    </div>
+<script>
+// Load experiences from JSON and populate the experience section
+async function loadExperiences() {
+    try {
+        const response = await fetch('experiences.json');
+        const data = await response.json();
+        const experiences = data.experiences || [];
 
-    <script src="script.js"></script>
-</body>
-</html>
+        // Filter for top_pick experiences
+        const topPickExperiences = experiences.filter(exp => exp.top_pick === true);
+
+        // Get container element
+        const container = document.getElementById('experience-container');
+        if (!container) return;
+
+        // Clear existing content
+        container.innerHTML = '';
+
+        // Create experience elements
+        topPickExperiences.forEach((exp, index) => {
+            // Create group div for hover effects
+            const groupDiv = document.createElement('div');
+            groupDiv.className = 'relative group experience-item';
+            groupDiv.setAttribute('data-accent', exp.titleColor || 'text-primary');
+
+            // Create timeline indicator
+            const timelineDiv = document.createElement('div');
+            timelineDiv.className = 'timeline-dot absolute -left-[21px] top-1 w-[10px] h-[10px] bg-background border border-border-subtle rounded-full';
+            groupDiv.appendChild(timelineDiv);
+
+            // Create experience content
+            const contentDiv = document.createElement('div');
+            contentDiv.className = 'flex flex-col mb-2 gap-1';
+
+            const titleRow = document.createElement('div');
+            titleRow.className = 'flex w-full justify-between items-baseline gap-4';
+
+            const titleH3 = document.createElement('h3');
+            titleH3.className = `font-body-md text-body-md font-semibold ${exp.titleColor || 'text-primary'}`;
+            titleH3.textContent = exp.title;
+            titleRow.appendChild(titleH3);
+
+            const datesSpan = document.createElement('span');
+            datesSpan.className = 'font-mono-sm text-mono-sm text-on-surface-variant shrink-0 text-right';
+            datesSpan.textContent = `${exp.start_date} – ${exp.end_date || 'Present'}`;
+            titleRow.appendChild(datesSpan);
+
+            const companyRow = document.createElement('div');
+            companyRow.className = 'flex w-full justify-between items-baseline gap-4';
+
+            const companySpan = document.createElement('span');
+            companySpan.className = 'font-mono-sm text-mono-sm text-on-surface-variant';
+            companySpan.textContent = exp.company_name;
+            companyRow.appendChild(companySpan);
+
+            if (exp.location) {
+                const locationSpan = document.createElement('span');
+                locationSpan.className = 'font-mono-sm text-mono-sm text-on-surface-variant shrink-0 text-right';
+                locationSpan.textContent = exp.location;
+                companyRow.appendChild(locationSpan);
+            }
+
+            contentDiv.appendChild(titleRow);
+            contentDiv.appendChild(companyRow);
+            groupDiv.appendChild(contentDiv);
+
+            // Description (first bullet point only)
+            if (exp.description && exp.description.length > 0) {
+                const descP = document.createElement('p');
+                descP.className = 'experience-desc font-body-md text-body-md text-on-surface-variant pl-4 border-l';
+                descP.textContent = exp.description[0]; // Only first bullet point
+                groupDiv.appendChild(descP);
+            }
+
+            // Add to container with spacing (except for first item)
+            if (index > 0) {
+                const spacer = document.createElement('div');
+                spacer.className = 'mb-8';
+                container.appendChild(spacer);
+            }
+            container.appendChild(groupDiv);
+        });
+    } catch (error) {
+        console.error('Error loading experiences:', error);
+        // Fallback to static content if JSON loading fails
+        loadFallbackExperiences();
+    }
+}
+
+// Fallback function in case JSON loading fails
+function loadFallbackExperiences() {
+    const container = document.getElementById('experience-container');
+    if (!container) return;
+
+    // Static fallback experiences (same as before but filtered)
+    const fallbackExperiences = [
+        {
+            title: 'Builder',
+            company_name: 'R&D Venture Studio',
+            start_date: 'Sept 25',
+            end_date: 'present',
+            location: '',
+            description: ['Building MVPs, collaborating on product development, and supporting early-stage spinouts.']
+        },
+        {
+            title: 'Federated Learning Researcher',
+            company_name: 'MOMA Lab',
+            start_date: 'May 2025',
+            end_date: 'Jul 2025',
+            location: '',
+            description: ['Engineered a framework for a single client to audit server fairness with 93% accuracy and quantified the fairness degradation caused by federated unlearning.']
+        },
+        {
+            title: 'Data Science Intern',
+            company_name: 'NYUAD Social Science',
+            start_date: 'Jan 2024',
+            end_date: 'May 2025',
+            location: '',
+            description: ['Built an LLM-powered data pipeline to process 2M+ records from 40k images, slashing character error rates by 70% and boosting name accuracy by 85%.']
+        },
+        {
+            title: 'Machine Learning Researcher',
+            company_name: 'Center for Responsible AI',
+            start_date: 'Sep 2024',
+            end_date: 'Feb 2025',
+            location: '',
+            description: ['Developed a novel search algorithm to find fair classification thresholds 10x faster, successfully mitigating demographic bias with only a 2% impact on model accuracy.']
+        }
+    ];
+
+    fallbackExperiences.forEach((exp, index) => {
+        if (index > 0) {
+            const spacer = document.createElement('div');
+            spacer.className = 'mb-8';
+            container.appendChild(spacer);
+        }
+
+        const groupDiv = document.createElement('div');
+        groupDiv.className = 'relative group experience-item';
+        groupDiv.setAttribute('data-accent', exp.titleColor || 'text-primary');
+
+        const timelineDiv = document.createElement('div');
+        timelineDiv.className = 'timeline-dot absolute -left-[21px] top-1 w-[10px] h-[10px] bg-background border border-border-subtle rounded-full';
+        groupDiv.appendChild(timelineDiv);
+
+        const contentDiv = document.createElement('div');
+        contentDiv.className = 'flex flex-col mb-2 gap-1';
+
+        const titleRow = document.createElement('div');
+        titleRow.className = 'flex w-full justify-between items-baseline gap-4';
+
+        const titleH3 = document.createElement('h3');
+        titleH3.className = `font-body-md text-body-md font-semibold ${exp.titleColor || 'text-primary'}`;
+        titleH3.textContent = exp.title;
+        titleRow.appendChild(titleH3);
+
+        const datesSpan = document.createElement('span');
+        datesSpan.className = 'font-mono-sm text-mono-sm text-on-surface-variant shrink-0 text-right';
+        datesSpan.textContent = `${exp.start_date} – ${exp.end_date}`;
+        titleRow.appendChild(datesSpan);
+
+        const companyRow = document.createElement('div');
+        companyRow.className = 'flex w-full justify-between items-baseline gap-4';
+
+        const companySpan = document.createElement('span');
+        companySpan.className = 'font-mono-sm text-mono-sm text-on-surface-variant';
+        companySpan.textContent = exp.company_name;
+        companyRow.appendChild(companySpan);
+
+        if (exp.location) {
+            const locationSpan = document.createElement('span');
+            locationSpan.className = 'font-mono-sm text-mono-sm text-on-surface-variant shrink-0 text-right';
+            locationSpan.textContent = exp.location;
+            companyRow.appendChild(locationSpan);
+        }
+
+        contentDiv.appendChild(titleRow);
+        contentDiv.appendChild(companyRow);
+        groupDiv.appendChild(contentDiv);
+
+        const descP = document.createElement('p');
+        descP.className = 'experience-desc font-body-md text-body-md text-on-surface-variant pl-4 border-l';
+        descP.textContent = exp.description[0];
+        groupDiv.appendChild(descP);
+
+        container.appendChild(groupDiv);
+    });
+}
+
+// Load experiences when page loads
+document.addEventListener('DOMContentLoaded', loadExperiences);
+</script>
+<!-- Projects Section -->
+<section class="py-section-gap border-b border-border-subtle" id="projects">
+<div class="border-b border-border-subtle mb-8 pb-4 flex justify-between items-end"><h2 class="font-mono-sm text-mono-sm text-on-surface-variant uppercase tracking-widest">Projects</h2><a class="font-mono-sm text-mono-sm text-on-surface-variant hover:text-primary transition-colors flex items-center gap-1" href="projects.html">View All <span class="material-symbols-outlined text-[14px]">arrow_forward</span></a></div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="projects-container">
+</div>
+</section>
+<script>
+async function loadProjects() {
+    try {
+        const response = await fetch('projects.json');
+        const data = await response.json();
+        const projects = (data.projects || []).filter((project) => project.top_pick === true);
+
+        const container = document.getElementById('projects-container');
+        if (!container) return;
+
+        container.innerHTML = '';
+
+        projects.forEach((project) => {
+            const card = document.createElement('a');
+            card.href = `projects.html#${project.id}`;
+            card.className = 'project-preview block p-6 border border-border-subtle bg-surface-container-lowest hover:bg-surface-elevated transition-colors group';
+
+            const title = document.createElement('h3');
+            title.className = `font-body-md text-body-md font-semibold mb-3 flex items-center gap-2 transition-colors ${project.titleColor || 'text-primary'}`;
+
+            if (project.icon) {
+                const icon = document.createElement('i');
+                icon.className = `${project.icon} ${project.iconColor || ''}`;
+                title.appendChild(icon);
+            }
+
+            const name = document.createElement('span');
+            name.textContent = project.name;
+            title.appendChild(name);
+
+            const arrow = document.createElement('span');
+            arrow.className = 'material-symbols-outlined text-[16px] opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all ml-auto';
+            arrow.textContent = 'arrow_outward';
+            title.appendChild(arrow);
+
+            card.appendChild(title);
+
+            if (project.description && project.description.length > 0) {
+                const desc = document.createElement('p');
+                desc.className = 'font-body-md text-body-md text-on-surface-variant text-sm';
+                desc.textContent = project.description[0];
+                card.appendChild(desc);
+            }
+
+            container.appendChild(card);
+        });
+    } catch (error) {
+        console.error('Error loading projects:', error);
+    }
+}
+
+document.addEventListener('DOMContentLoaded', loadProjects);
+</script>
+<!-- Skills Section -->
+<section class="py-section-gap">
+<div class="border-b border-border-subtle mb-8 pb-4">
+<h2 class="font-mono-sm text-mono-sm text-on-surface-variant uppercase tracking-widest">
+    SKILLS
+</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-y-8 gap-x-12">
+<div>
+<h3 class="font-mono-label text-base font-bold text-primary mb-3">Languages</h3>
+<p class="font-mono-sm text-[15px] text-on-surface-variant leading-relaxed">C/C++, JavaScript, Python, HTML/CSS, Dart</p>
+</div>
+<div>
+<h3 class="font-mono-label text-base font-bold text-primary mb-3">Machine Learning</h3>
+<p class="font-mono-sm text-[15px] text-on-surface-variant leading-relaxed">PyTorch, TensorFlow, Scikit-learn, Hugging Face, CUDA</p>
+</div>
+<div>
+<h3 class="font-mono-label text-base font-bold text-primary mb-3">Web Development</h3>
+<p class="font-mono-sm text-[15px] text-on-surface-variant leading-relaxed">Mongoose, React.js, Node.js, Express.js, Next.js (MERN), Tailwind, Shadcn</p>
+</div>
+<div>
+<h3 class="font-mono-label text-base font-bold text-primary mb-3">Databases</h3>
+<p class="font-mono-sm text-[15px] text-on-surface-variant leading-relaxed">SQL, MongoDB, Firestore</p>
+</div>
+<div>
+<h3 class="font-mono-label text-base font-bold text-primary mb-3">App Development</h3>
+<p class="font-mono-sm text-[15px] text-on-surface-variant leading-relaxed">Flutter + Dart</p>
+</div>
+<div>
+<h3 class="font-mono-label text-base font-bold text-primary mb-3">Development Tools</h3>
+<p class="font-mono-sm text-[15px] text-on-surface-variant leading-relaxed">Git, VS Code, Jupyter Notebooks, Conda</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-background w-full py-section-gap border-t border-border-subtle mt-auto">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end px-margin-mobile md:px-gutter max-w-container-max mx-auto gap-6 font-mono-sm text-mono-sm text-on-surface-variant">
+<div class="space-y-3">
+<div class="text-primary font-mono-label">© 2026 Nathan Behailu</div>
+<div class="flex flex-wrap gap-4">
+<a class="hover:text-primary transition-colors" href="mailto:nz2212@nyu.edu">Email</a>
+<a class="hover:text-primary transition-colors" href="https://www.linkedin.com/in/nathan-behailu/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+<a class="hover:text-primary transition-colors" href="https://github.com/nathanbehailuz" target="_blank" rel="noopener noreferrer">GitHub</a>
+</div>
+</div>
+<div class="opacity-70">Built with HTML, Tailwind, a bit of JS, and a lot of 🤍</div>
+</div>
+</footer>
+
+
+</body></html>

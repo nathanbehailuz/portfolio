@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Nathan Behailu - Experience</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script src="tailwind-config.js"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="styles.css"/>
+</head>
+<body class="bg-background text-primary pt-24 pb-section-gap min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<header class="bg-background/80 backdrop-blur-md fixed top-0 w-full z-50 transition-all duration-200 ease-in-out">
+<div class="flex justify-between items-center h-16 px-margin-mobile md:px-gutter max-w-container-max mx-auto">
+<a class="hover:opacity-80 transition-opacity flex items-center" href="index.html" aria-label="Nathan Behailu">
+<img src="images/nathan.svg" alt="Nathan Behailu" class="h-6 w-auto brightness-0 invert">
+</a>
+<nav class="hidden md:flex gap-6 font-mono-label text-mono-label">
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="index.html">Home</a>
+<a class="text-primary transition-colors" href="experiences.html">Experience</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="projects.html">Projects</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Resume</a>
+</nav>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="pb-section-gap px-margin-mobile md:px-gutter max-w-container-max mx-auto relative">
+<header class="mb-section-gap">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-primary mb-4">Experiences</h1>
+</header>
+<div class="flex gap-4 mb-8 font-mono-label text-mono-label">
+<button class="px-4 py-2 border border-outline-variant text-on-surface-variant hover:border-primary hover:text-primary rounded-sm transition-all filter-btn" data-filter="professional" aria-pressed="false">Professional</button>
+<button class="px-4 py-2 border border-outline-variant text-on-surface-variant hover:border-primary hover:text-primary rounded-sm transition-all filter-btn" data-filter="leadership & community" aria-pressed="false">Leadership & Community</button>
+</div>
+<!-- Dynamic Experience Container -->
+<div class="relative" id="experience-container">
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-background w-full py-section-gap border-t border-border-subtle mt-auto">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end px-margin-mobile md:px-gutter max-w-container-max mx-auto gap-6 font-mono-sm text-mono-sm text-on-surface-variant">
+<div class="space-y-3">
+<div class="text-primary font-mono-label">© 2026 Nathan Behailu</div>
+<div class="flex flex-wrap gap-4">
+<a class="hover:text-primary transition-colors" href="mailto:nz2212@nyu.edu">Email</a>
+<a class="hover:text-primary transition-colors" href="https://www.linkedin.com/in/nathan-behailu/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+<a class="hover:text-primary transition-colors" href="https://github.com/nathanbehailuz" target="_blank" rel="noopener noreferrer">GitHub</a>
+</div>
+</div>
+<div class="opacity-70">Built with HTML, Tailwind, a bit of JS, and a lot of 🤍</div>
+</div>
+</footer>
+
+<script>
+let allExperiences = [];
+let activeFilter = null;
+
+const inactiveBtnClasses = ['border-outline-variant', 'text-on-surface-variant'];
+const activeBtnClasses = ['border-primary', 'text-primary'];
+
+function createExperienceElement(exp) {
+    const groupDiv = document.createElement('div');
+    groupDiv.className = 'experience-card relative group';
+    groupDiv.setAttribute('data-accent', exp.titleColor || 'text-primary');
+
+    const headerDiv = document.createElement('div');
+    headerDiv.className = 'flex flex-col w-full mb-2';
+
+    const titleRow = document.createElement('div');
+    titleRow.className = 'flex w-full justify-between items-baseline gap-4';
+
+    const titleH3 = document.createElement('h3');
+    titleH3.className = `font-body-md text-body-md font-semibold ${exp.titleColor || 'text-primary'}`;
+    titleH3.textContent = exp.title;
+    titleRow.appendChild(titleH3);
+
+    const datesSpan = document.createElement('span');
+    datesSpan.className = 'font-body-md text-body-md text-on-surface-variant shrink-0 text-right';
+    datesSpan.textContent = `${exp.start_date} – ${exp.end_date || 'Present'}`;
+    titleRow.appendChild(datesSpan);
+
+    const companyRow = document.createElement('div');
+    companyRow.className = 'flex w-full justify-between items-baseline gap-4';
+
+    const companySpan = document.createElement('span');
+    companySpan.className = 'italic text-on-surface-variant font-normal';
+    companySpan.textContent = exp.company_name;
+    companyRow.appendChild(companySpan);
+
+    if (exp.location) {
+        const locationSpan = document.createElement('span');
+        locationSpan.className = 'italic text-on-surface-variant shrink-0 text-right';
+        locationSpan.textContent = exp.location;
+        companyRow.appendChild(locationSpan);
+    }
+
+    headerDiv.appendChild(titleRow);
+    headerDiv.appendChild(companyRow);
+    groupDiv.appendChild(headerDiv);
+
+    if (exp.description && exp.description.length > 0) {
+        const descList = document.createElement('ul');
+        descList.className = 'list-disc pl-5 font-body-sm text-body-sm text-on-surface-variant space-y-1';
+
+        exp.description.forEach((point) => {
+            const item = document.createElement('li');
+            item.textContent = point;
+            descList.appendChild(item);
+        });
+
+        groupDiv.appendChild(descList);
+    }
+
+    return groupDiv;
+}
+
+function createSectionHeading(title) {
+    const heading = document.createElement('h2');
+    heading.className = 'font-mono-sm text-mono-sm text-on-surface-variant uppercase tracking-widest mb-8';
+    heading.textContent = title;
+    return heading;
+}
+
+function createSection(title, experiences) {
+    const section = document.createElement('section');
+
+    section.appendChild(createSectionHeading(title));
+
+    const list = document.createElement('div');
+    list.className = 'space-y-8';
+    experiences.forEach((exp) => {
+        list.appendChild(createExperienceElement(exp));
+    });
+    section.appendChild(list);
+
+    return section;
+}
+
+function renderExperiences() {
+    const container = document.getElementById('experience-container');
+    if (!container) return;
+
+    container.innerHTML = '';
+    container.className = 'relative space-y-section-gap';
+
+    const professional = allExperiences.filter((exp) => exp.tag === 'professional');
+    const leadership = allExperiences.filter((exp) => exp.tag === 'leadership & community');
+
+    const showProfessional = !activeFilter || activeFilter === 'professional';
+    const showLeadership = !activeFilter || activeFilter === 'leadership & community';
+
+    if (showProfessional && professional.length > 0) {
+        container.appendChild(createSection('Professional', professional));
+    }
+
+    if (showProfessional && showLeadership && professional.length > 0 && leadership.length > 0) {
+        const separator = document.createElement('hr');
+        separator.className = 'border-0 border-t border-outline-variant';
+        separator.setAttribute('aria-hidden', 'true');
+        container.appendChild(separator);
+    }
+
+    if (showLeadership && leadership.length > 0) {
+        container.appendChild(createSection('Leadership & Community', leadership));
+    }
+}
+
+function setFilterButtonState(button, isActive) {
+    inactiveBtnClasses.forEach((cls) => button.classList.remove(cls));
+    activeBtnClasses.forEach((cls) => button.classList.remove(cls));
+
+    if (isActive) {
+        activeBtnClasses.forEach((cls) => button.classList.add(cls));
+    } else {
+        inactiveBtnClasses.forEach((cls) => button.classList.add(cls));
+    }
+
+    button.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+}
+
+function updateFilterButtons() {
+    document.querySelectorAll('.filter-btn').forEach((button) => {
+        setFilterButtonState(button, button.dataset.filter === activeFilter);
+    });
+}
+
+async function loadExperiences() {
+    try {
+        const response = await fetch('experiences.json');
+        const data = await response.json();
+        allExperiences = data.experiences || [];
+        renderExperiences();
+    } catch (error) {
+        console.error('Error loading experiences:', error);
+        allExperiences = [
+            {
+                title: 'Builder (Software Engineer)',
+                company_name: 'Caisson Ventures',
+                start_date: 'Sep 2025',
+                end_date: 'Present',
+                location: 'Remote',
+                description: ['Building MVPs, collaborating on product development, and supporting early-stage spinouts.'],
+                tag: 'professional'
+            }
+        ];
+        renderExperiences();
+    }
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('.filter-btn').forEach((button) => {
+        button.addEventListener('click', function() {
+            const filterValue = this.dataset.filter;
+            activeFilter = activeFilter === filterValue ? null : filterValue;
+            updateFilterButtons();
+            renderExperiences();
+        });
+    });
+
+    loadExperiences();
+});
+</script>
+</body>
+</html>

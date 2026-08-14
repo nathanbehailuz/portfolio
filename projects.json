@@ -11,11 +11,20 @@
         "Architected a Clean-Architecture Flutter system integrating Firebase, Google Maps, and multimodal input (text, image, voice) for 90% diagnostic accuracy."
       ],
       "tags": ["Mobile", "ML"],
-      "tools": ["Flutter", "Firebase", "OpenAI GPT-4", "Gemini AI", "Google Maps API", "Dio", "Bloc"],
+      "tools": [
+        "Flutter",
+        "Firebase",
+        "OpenAI GPT-4",
+        "Gemini AI",
+        "Google Maps API",
+        "Dio",
+        "Bloc"
+      ],
       "demo_link": "https://drive.google.com/file/d/1eC5e5ExWpBts_3Za4W-M1VKsAbIpUUDK/view",
       "github_link": "https://github.com/nathanbehailuz/autovert",
       "try_it_link": "localhost.html",
-      "category": "Mobile"
+      "category": "Mobile",
+      "top_pick": true
     },
     {
       "id": "insidex",
@@ -28,11 +37,21 @@
         "Designed a FastAPI-based backend and React frontend for real-time alerts, achieving top-decile alpha of 5% in historical backtests."
       ],
       "tags": ["Web", "Finance", "ML"],
-      "tools": ["FastAPI", "LightGBM", "PostgreSQL", "React", "TailwindCSS", "Celery", "Redis", "SendGrid"],
+      "tools": [
+        "FastAPI",
+        "LightGBM",
+        "PostgreSQL",
+        "React",
+        "TailwindCSS",
+        "Celery",
+        "Redis",
+        "SendGrid"
+      ],
       "demo_link": "#",
       "github_link": "https://github.com/nathanbehailuz/InsideX",
       "try_it_link": "localhost.html",
-      "category": "Web"
+      "category": "Web",
+      "top_pick": true
     },
     {
       "id": "cliquepix",
@@ -45,11 +64,21 @@
         "Integrated TensorFlow.js and face-api.js for person recognition, backed by Node.js, Express, and MongoDB with secure bcrypt authentication."
       ],
       "tags": ["Web", "ML"],
-      "tools": ["Node.js", "Express", "MongoDB", "Mongoose", "TensorFlow.js", "face-api.js", "Handlebars", "Multer"],
+      "tools": [
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "Mongoose",
+        "TensorFlow.js",
+        "face-api.js",
+        "Handlebars",
+        "Multer"
+      ],
       "demo_link": "#",
       "github_link": "https://github.com/nathanbehailuz/cliquepix",
       "try_it_link": "localhost.html",
-      "category": "Web"
+      "category": "Web",
+      "top_pick": false
     },
     {
       "id": "brain-tumor-detection",
@@ -62,11 +91,20 @@
         "Built an end-to-end pipeline using TensorFlow and Flask, allowing real-time predictions through an interactive web interface with secure file uploads."
       ],
       "tags": ["ML", "Web"],
-      "tools": ["TensorFlow", "Keras", "Flask", "OpenCV", "NumPy", "Pandas", "Bootstrap"],
+      "tools": [
+        "TensorFlow",
+        "Keras",
+        "Flask",
+        "OpenCV",
+        "NumPy",
+        "Pandas",
+        "Bootstrap"
+      ],
       "demo_link": "#",
       "github_link": "https://github.com/nathanbehailuz/brain-tumor-detection",
       "try_it_link": "localhost.html",
-      "category": "ML"
+      "category": "ML",
+      "top_pick": false
     },
     {
       "id": "churn-prediction",
@@ -79,11 +117,20 @@
         "Engineered data pipelines with Pandas and Scikit-learn for preprocessing, encoding, and feature scaling, uncovering key churn indicators such as tenure and contract type."
       ],
       "tags": ["ML"],
-      "tools": ["TensorFlow", "Keras", "Pandas", "NumPy", "Matplotlib", "Seaborn", "Scikit-learn"],
+      "tools": [
+        "TensorFlow",
+        "Keras",
+        "Pandas",
+        "NumPy",
+        "Matplotlib",
+        "Seaborn",
+        "Scikit-learn"
+      ],
       "demo_link": "#",
       "github_link": "https://github.com/nathanbehailuz/churn-prediction",
       "try_it_link": "localhost.html",
-      "category": "ML"
+      "category": "ML",
+      "top_pick": false
     },
     {
       "id": "ml-from-scratch",
@@ -96,11 +143,19 @@
         "Showcased deep mathematical understanding through manual gradient computations and optimization logic."
       ],
       "tags": ["ML"],
-      "tools": ["Python", "NumPy", "Pandas", "PyTorch", "Matplotlib", "SciPy"],
+      "tools": [
+        "Python",
+        "NumPy",
+        "Pandas",
+        "PyTorch",
+        "Matplotlib",
+        "SciPy"
+      ],
       "demo_link": "#",
       "github_link": "https://github.com/nathanbehailuz/ml-from-scratch",
       "try_it_link": "localhost.html",
-      "category": "ML"
+      "category": "ML",
+      "top_pick": false
     },
     {
       "id": "ai-flappy-bird",
@@ -113,12 +168,43 @@
         "Implemented the full physics engine and visualization in Pygame, evolving neural networks that achieved average scores of 30+ through reinforcement learning."
       ],
       "tags": ["ML"],
-      "tools": ["Python", "Pygame", "NEAT-Python", "Matplotlib", "Graphviz"],
+      "tools": [
+        "Python",
+        "Pygame",
+        "NEAT-Python",
+        "Matplotlib",
+        "Graphviz"
+      ],
       "demo_link": "#",
       "github_link": "https://github.com/nathanbehailuz/AI-plays-Flappy-Bird",
       "try_it_link": "localhost.html",
-      "category": "ML"
+      "category": "ML",
+      "top_pick": true
+    },
+    {
+      "id": "world-cup-predictor",
+      "name": "World Cup Predictor",
+      "icon": "fas fa-futbol",
+      "iconColor": "text-cyan-400",
+      "titleColor": "text-cyan-400",
+      "description": [
+        "Built an end-to-end Python ML pipeline to predict FIFA World Cup 2026 match outcomes from 49K+ international matches spanning 336 national teams, with automated data ingestion, feature engineering, training, and inference.",
+        "Engineered 17 point-in-time features and trained an XGBoost model evaluated on a 2,245-match temporal holdout, achieving 83.3% accuracy while preventing future data leakage."
+      ],
+      "tags": ["ML", "Sports", "Data"],
+      "tools": [
+        "Python",
+        "XGBoost",
+        "Pandas",
+        "NumPy",
+        "SQLite",
+        "Scikit-learn"
+      ],
+      "demo_link": "#",
+      "github_link": "https://github.com/nathanbehailuz/world_cup_pred",
+      "try_it_link": "localhost.html",
+      "category": "ML",
+      "top_pick": true
     }
   ]
-  
 }

@@ -1,192 +1,182 @@
+/* Design tokens */
 :root {
-    --bg: #111111;
-    --text: #e0e0e0;
-    --text-muted: #888888;
-    --text-dim: #666666;
-    --border: #2a2a2a;
-    --border-hover: #444444;
-    --accent: #c8c8c8;
-}
-
-body {
-    font-family: 'Roboto Mono', monospace;
-    background-color: var(--bg);
-    color: var(--text);
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-body.light-mode {
-    --bg: #f5f5f0;
-    --text: #1a1a1a;
-    --text-muted: #555555;
-    --text-dim: #888888;
-    --border: #d4d4d4;
-    --border-hover: #999999;
-    --accent: #333333;
-    background-color: var(--bg);
-    color: var(--text);
-}
-
-body.light-mode .bg-\[#111111\] {
-    background-color: var(--bg);
-}
-
-body.light-mode #header {
-    background-color: var(--bg);
-}
-
-body.light-mode .text-\[#E0E0E0\] {
-    color: var(--text);
-}
-
-body.light-mode .text-\[#A0A0A0\] {
-    color: var(--text-muted);
-}
-
-body.light-mode .text-white {
-    color: var(--text);
-}
-
-body.light-mode .text-\[#888888\] {
-    color: var(--text-muted);
-}
-
-body.light-mode .border-\[#2a2a2a\] {
-    border-color: var(--border);
-}
-
-body.light-mode .hover\:text-white:hover {
-    color: var(--text);
-}
-
-body.light-mode #theme-toggle {
-    background-color: #ebebeb;
-    border-color: var(--border);
-}
-
-body.light-mode #theme-toggle:hover {
-    border-color: var(--border-hover);
+    --background: #000000;
+    --primary: #ffffff;
+    --on-primary: #2f3131;
+    --on-surface: #e2e2e2;
+    --on-surface-variant: #c4c7c8;
+    --outline: #8e9192;
+    --outline-variant: #444748;
+    --border-subtle: #18181B;
+    --border-hover: rgba(255, 255, 255, 0.35);
+    --surface: #131313;
+    --surface-elevated: #09090B;
+    --surface-container-lowest: #0e0e0e;
+    --font-mono: "JetBrains Mono", monospace;
+    --font-sans: "Geist", sans-serif;
+    --container-max: 800px;
+    --section-gap: 64px;
+    --gutter: 24px;
+    --margin-mobile: 20px;
 }
 
 html {
     scroll-padding-top: 6rem;
 }
 
-.section-heading {
-    font-size: 0.75rem;
-    font-weight: 700;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--text-muted);
-    padding-bottom: 0.5rem;
-    border-bottom: 1px solid var(--border);
-    margin-bottom: 1.5rem;
+body {
+    background-color: var(--background);
+    color: var(--primary);
+    font-family: var(--font-mono);
+    -webkit-font-smoothing: antialiased;
+    margin: 0;
 }
 
-.nav-link {
-    color: var(--text-muted);
-    transition: color 0.2s ease;
+::selection {
+    background-color: var(--primary);
+    color: var(--background);
 }
 
-.nav-link:hover {
-    color: var(--text);
-}
-
-.sidebar-link {
-    color: var(--text-muted);
-    transition: color 0.2s ease;
-}
-
-.sidebar-link:hover {
-    color: var(--text);
-}
-
-.sidebar-link i {
-    color: var(--text-dim);
-}
-
-.project-link {
-    color: var(--text);
-    text-decoration: underline;
-    text-decoration-color: var(--border-hover);
-    text-underline-offset: 3px;
-    transition: text-decoration-color 0.2s ease;
-}
-
-.project-link:hover {
-    text-decoration-color: var(--text);
-}
-
-.tech-tags {
-    color: var(--text-dim);
-    font-size: 0.75rem;
-}
-
-#theme-toggle {
-    background-color: transparent;
-    border: 1px solid var(--border);
+/* Experience timeline accents (home) */
+.experience-item .timeline-dot {
     transition: border-color 0.2s ease;
 }
 
-#theme-toggle:hover {
+.experience-item:hover .timeline-dot {
+    border-color: var(--border-hover) !important;
+}
+
+.experience-item .experience-desc {
+    border-left: 1px solid transparent;
+    transition: border-color 0.2s ease;
+}
+
+.experience-item:hover .experience-desc {
+    border-left-color: var(--border-hover) !important;
+}
+
+/* Experience cards (experiences page) */
+.experience-card {
+    border: 1px solid var(--border-subtle);
+    border-radius: 0.125rem;
+    padding: 20px 24px;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.experience-card:hover {
     border-color: var(--border-hover);
+    background-color: var(--surface-elevated);
 }
 
-#theme-icon {
-    color: var(--text-muted);
+/* Filter buttons (experiences + projects) */
+.filter-btn.active {
+    color: var(--primary);
+    border-color: var(--primary);
 }
 
-.project-icon {
-    display: inline-block;
-    color: var(--text-dim);
-    transition: color 0.2s ease;
-    font-size: 0.85em;
+/* Project cards */
+.project-card {
+    background-color: transparent;
+    border: 1px solid var(--border-subtle);
+    border-radius: 0.125rem;
+    padding: 24px;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    align-items: flex-start;
+    scroll-margin-top: 140px;
 }
 
-.project-icon:hover {
-    color: var(--text-muted);
+.project-card.highlight {
+    border-color: var(--border-hover);
+    background-color: rgba(255, 255, 255, 0.03);
 }
 
-.autovert-icon.animate {
-    animation: driveCar 2s ease-in-out;
+.project-card:hover {
+    border-color: var(--border-hover);
+    background-color: var(--surface-elevated);
 }
 
-@keyframes driveCar {
-    0% { transform: translateX(-20px); }
-    50% { transform: translateX(20px); }
-    100% { transform: translateX(0); }
+.project-preview {
+    transition: border-color 0.2s ease, background-color 0.2s ease;
 }
 
-.cliquepix-icon.animate {
-    animation: imageFlash 1.5s ease-in-out;
+.project-preview:hover {
+    border-color: var(--border-hover) !important;
 }
 
-@keyframes imageFlash {
-    0%, 100% { opacity: 1; transform: scale(1); }
-    25% { opacity: 0.7; transform: scale(1.1); }
-    50% { opacity: 0.5; transform: scale(1.2); }
-    75% { opacity: 0.7; transform: scale(1.1); }
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 0;
 }
 
-.flappybird-icon.animate {
-    animation: gameBounce 1.8s ease-in-out;
+.project-tag {
+    padding: 2px 8px;
+    background-color: var(--border-subtle);
+    border: 1px solid #3F3F46;
+    border-radius: 0.125rem;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--on-surface-variant);
+    letter-spacing: 0.02em;
 }
 
-@keyframes gameBounce {
-    0%, 100% { transform: translateY(0) rotate(0deg); }
-    25% { transform: translateY(-10px) rotate(-5deg); }
-    50% { transform: translateY(-15px) rotate(0deg); }
-    75% { transform: translateY(-10px) rotate(5deg); }
+.project-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex-shrink: 0;
+    margin-top: 4px;
 }
 
-.insider-icon.animate {
-    animation: chartGrow 2s ease-in-out;
+.project-action {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 8px 14px;
+    border-radius: 0.125rem;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 400;
+    transition: color 0.2s ease, border-color 0.2s ease;
+    min-width: 110px;
+    background-color: transparent;
+    color: var(--on-surface-variant);
+    border: 1px solid var(--outline-variant);
 }
 
-@keyframes chartGrow {
-    0% { transform: scale(1) rotate(0deg); }
-    25% { transform: scale(1.1) rotate(2deg); }
-    50% { transform: scale(1.2) rotate(0deg); }
-    75% { transform: scale(1.1) rotate(-2deg); }
-    100% { transform: scale(1) rotate(0deg); }
+.project-action:hover {
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+.project-title-link {
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+.project-title-link:hover {
+    opacity: 0.8;
+}
+
+@media (max-width: 640px) {
+    .project-card {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .project-actions {
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .project-action {
+        min-width: 0;
+        flex: 1;
+    }
 }
