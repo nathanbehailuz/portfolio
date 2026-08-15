@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <span>Demo</span>
                 </a>
                 ` : ''}
-                ${project.tags.includes('Web') ? `
+                ${project.try_it_link && project.try_it_link !== 'none' ? `
                 <a href="${project.try_it_link}" class="project-action" target="_blank" rel="noopener noreferrer">
                     <i class="fas fa-external-link-alt"></i>
                     <span>Try It</span>
