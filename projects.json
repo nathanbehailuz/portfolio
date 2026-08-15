@@ -1,6 +1,31 @@
 {
   "projects": [
     {
+      "id": "world-cup-predictor",
+      "name": "World Cup Predictor",
+      "icon": "fas fa-futbol",
+      "iconColor": "text-cyan-400",
+      "titleColor": "text-cyan-400",
+      "description": [
+        "Built a 71.2% accurate Python ML pipeline that predicts FIFA World Cup 2026 match outcomes from 49K+ international matches spanning 336 national teams, with automated data ingestion, feature engineering, training, and inference.",
+        "Engineered 17 point-in-time features and trained an XGBoost model evaluated on a 2,245-match temporal holdout."
+      ],
+      "tags": ["ML", "Sports", "Data"],
+      "tools": [
+        "Python",
+        "XGBoost",
+        "Pandas",
+        "NumPy",
+        "SQLite",
+        "Scikit-learn"
+      ],
+      "demo_link": "#",
+      "github_link": "https://github.com/nathanbehailuz/world_cup_pred",
+      "try_it_link": "localhost.html",
+      "category": "ML",
+      "top_pick": true
+    },
+    {
       "id": "autovert",
       "name": "AutoVert",
       "icon": "fas fa-car",
@@ -177,31 +202,6 @@
       ],
       "demo_link": "#",
       "github_link": "https://github.com/nathanbehailuz/AI-plays-Flappy-Bird",
-      "try_it_link": "localhost.html",
-      "category": "ML",
-      "top_pick": true
-    },
-    {
-      "id": "world-cup-predictor",
-      "name": "World Cup Predictor",
-      "icon": "fas fa-futbol",
-      "iconColor": "text-cyan-400",
-      "titleColor": "text-cyan-400",
-      "description": [
-        "Built an end-to-end Python ML pipeline to predict FIFA World Cup 2026 match outcomes from 49K+ international matches spanning 336 national teams, with automated data ingestion, feature engineering, training, and inference.",
-        "Engineered 17 point-in-time features and trained an XGBoost model evaluated on a 2,245-match temporal holdout, achieving 83.3% accuracy while preventing future data leakage."
-      ],
-      "tags": ["ML", "Sports", "Data"],
-      "tools": [
-        "Python",
-        "XGBoost",
-        "Pandas",
-        "NumPy",
-        "SQLite",
-        "Scikit-learn"
-      ],
-      "demo_link": "#",
-      "github_link": "https://github.com/nathanbehailuz/world_cup_pred",
       "try_it_link": "localhost.html",
       "category": "ML",
       "top_pick": true
