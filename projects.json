@@ -52,8 +52,8 @@
       "top_pick": true
     },
     {
-      "id": "insidex",
-      "name": "InsideX",
+      "id": "open-signal",
+      "name": "Open Signal",
       "icon": "fas fa-chart-line",
       "iconColor": "text-blue-400",
       "titleColor": "text-blue-400",
@@ -72,9 +72,9 @@
         "Redis",
         "SendGrid"
       ],
-      "demo_link": "#",
+      "demo_link": "none",
       "github_link": "https://github.com/nathanbehailuz/InsideX",
-      "try_it_link": "localhost.html",
+      "try_it_link": "https://open-signal-sec.vercel.app",
       "category": "Web",
       "top_pick": true
     },
