@@ -19,9 +19,9 @@
         "SQLite",
         "Scikit-learn"
       ],
-      "demo_link": "https://world-cup-26-pred.vercel.app/",
+      "demo_link": "none",
       "github_link": "https://github.com/nathanbehailuz/world_cup_pred",
-      "try_it_link": "localhost.html",
+      "try_it_link": "https://world-cup-26-pred.vercel.app/",
       "category": "ML",
       "top_pick": true
     },

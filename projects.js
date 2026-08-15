@@ -79,10 +79,12 @@ document.addEventListener('DOMContentLoaded', function() {
                     <i class="fab fa-github"></i>
                     <span>Code</span>
                 </a>
+                ${project.demo_link && project.demo_link !== 'none' ? `
                 <a href="${project.demo_link}" class="project-action" target="_blank" rel="noopener noreferrer">
                     <i class="fas fa-play"></i>
                     <span>Demo</span>
                 </a>
+                ` : ''}
                 ${project.tags.includes('Web') ? `
                 <a href="${project.try_it_link}" class="project-action" target="_blank" rel="noopener noreferrer">
                     <i class="fas fa-external-link-alt"></i>
