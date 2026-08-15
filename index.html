@@ -37,8 +37,36 @@
 <img alt="Nathan Behailu Profile" class="w-full h-full object-cover" src="images/pp.JPG">
 </div>
 <div class="flex-1">
-<img src="images/nathan_behailu.svg" alt="Nathan Behailu" class="h-20 w-auto mb-2 brightness-0 invert">
-<p class="font-mono-label text-mono-label text-on-surface-variant mb-6">Software Engineer & Researcher</p>
+<div class="mb-6">
+<img id="hero-signature" src="images/nathan_behailu.svg" alt="Nathan Behailu" class="mb-2 block h-auto brightness-0 invert">
+<p id="hero-subtitle" class="font-mono-label text-mono-label text-on-surface-variant whitespace-nowrap m-0 w-fit">Software Engineer & Researcher</p>
+</div>
+<script>
+(function () {
+    function matchSignatureToSubtitle() {
+        const signature = document.getElementById('hero-signature');
+        const subtitle = document.getElementById('hero-subtitle');
+        if (!signature || !subtitle) return;
+        signature.style.width = `${subtitle.offsetWidth}px`;
+    }
+
+    function runMatch() {
+        if (document.fonts && document.fonts.ready) {
+            document.fonts.ready.then(matchSignatureToSubtitle);
+        } else {
+            matchSignatureToSubtitle();
+        }
+    }
+
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', runMatch);
+    } else {
+        runMatch();
+    }
+    window.addEventListener('load', matchSignatureToSubtitle);
+    window.addEventListener('resize', matchSignatureToSubtitle);
+})();
+</script>
 <p class="font-body-md text-body-md text-on-surface-variant max-w-2xl mb-8 leading-relaxed">
                     Hi, I'm Nathan, a Computer Science and Applied Mathematics graduate from NYU Abu Dhabi. I build full-stack products and applied ML systems, turning problems or technical curiosities into research projects or shipped software.
                 </p>
