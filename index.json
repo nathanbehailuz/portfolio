@@ -1,0 +1,57 @@
+{
+  "intro": [
+    {
+      "parts": [
+        { "text": "Hi, I'm Nathan, a Computer Science and Applied Mathematics graduate from " },
+        { "text": "NYU Abu Dhabi", "highlight": true, "color": "blueviolet" },
+        { "text": "." }
+      ]
+    },
+    {
+      "parts": [
+        { "text": "I love building products (apps, websites, and machine learning systems) that solve real problems and make everyday life a little easier. I'm especially interested in AI/ML-powered products and predictive modeling." }
+      ]
+    },
+    {
+      "parts": [
+        { "text": "Check out my " },
+        { "text": "experience", "href": "experiences.html" },
+        { "text": ", " },
+        { "text": "projects", "href": "projects.html" },
+        { "text": ", and more. If anything catches your eye or you'd just like to chat, feel free to reach out!" }
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "title": "Languages",
+      "icon": "code",
+      "items": "C/C++, JavaScript, Python, HTML/CSS, Dart"
+    },
+    {
+      "title": "Machine Learning",
+      "icon": "psychology",
+      "items": "PyTorch, TensorFlow, Scikit-learn, Hugging Face, CUDA"
+    },
+    {
+      "title": "Web Development",
+      "icon": "language",
+      "items": "Mongoose, React.js, Node.js, Express.js, Next.js (MERN), Tailwind, Shadcn"
+    },
+    {
+      "title": "Databases",
+      "icon": "database",
+      "items": "SQL, MongoDB, Firestore"
+    },
+    {
+      "title": "App Development",
+      "icon": "smartphone",
+      "items": "Flutter + Dart"
+    },
+    {
+      "title": "Development Tools",
+      "icon": "build",
+      "items": "Git, VS Code, Jupyter Notebooks, Conda"
+    }
+  ]
+}

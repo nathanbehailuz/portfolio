@@ -37,6 +37,28 @@ body {
     color: var(--background);
 }
 
+/* Hero social icons */
+.social-icon {
+    width: 20px;
+    height: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--on-surface-variant);
+    transition: color 0.2s ease;
+}
+
+.social-icon:hover {
+    color: var(--primary);
+}
+
+.social-icon svg {
+    width: 20px;
+    height: 20px;
+    display: block;
+    fill: currentColor;
+}
+
 /* Experience timeline accents (home) */
 .experience-item .timeline-dot {
     transition: border-color 0.2s ease;
@@ -119,7 +141,7 @@ body {
     border: 1px solid #3F3F46;
     border-radius: 0.125rem;
     font-size: 12px;
-    font-weight: 500;
+    font-weight: 400;
     color: var(--on-surface-variant);
     letter-spacing: 0.02em;
 }

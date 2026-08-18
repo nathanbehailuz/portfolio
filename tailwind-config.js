@@ -61,11 +61,11 @@ tailwind.config = {
             },
             fontSize: {
                 "mono-label": ["14px", { lineHeight: "1.5", letterSpacing: "0.02em", fontWeight: "400" }],
-                "mono-sm": ["12px", { lineHeight: "1.4", fontWeight: "500" }],
+                "mono-sm": ["12px", { lineHeight: "1.4", fontWeight: "400" }],
                 "headline-lg": ["32px", { lineHeight: "1.2", letterSpacing: "-0.02em", fontWeight: "600" }],
-                "headline-md": ["20px", { lineHeight: "1.4", fontWeight: "500" }],
+                "headline-md": ["20px", { lineHeight: "1.4", fontWeight: "400" }],
                 "headline-lg-mobile": ["24px", { lineHeight: "1.2", letterSpacing: "-0.01em", fontWeight: "600" }],
-                "body-md": ["16px", { lineHeight: "1.6", fontWeight: "500" }],
+                "body-md": ["16px", { lineHeight: "1.6", fontWeight: "400" }],
                 "body-sm": ["14px", { lineHeight: "1.55", fontWeight: "400" }]
             }
         }
