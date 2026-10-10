@@ -3,7 +3,7 @@
     {
       "parts": [
         { "text": "Hi, I'm Nathan, a Computer Science and Applied Mathematics graduate from " },
-        { "text": "NYU", "highlight": true, "color": "blueviolet" },
+        { "text": "New York University", "highlight": true, "color": "blueviolet" },
         { "text": "." }
       ]
     },
