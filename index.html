@@ -1,344 +1,223 @@
-<!DOCTYPE html><html class="dark" lang="en"><head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
 <meta charset="utf-8">
-<meta content="width=device-width, initial-scale=1.0" name="viewport">
-<title>Nathan Behailu - Software Engineer & Researcher</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nathan Behailu</title>
+<meta name="description" content="Nathan Behailu. Software engineer and researcher. Products and machine learning systems.">
+<meta name="theme-color" content="#070709">
 <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script src="tailwind-config.js"></script>
-<link href="https://fonts.googleapis.com" rel="preconnect">
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
-<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<script>document.documentElement.classList.add('js');</script>
 </head>
-<body class="bg-background text-primary pt-24 pb-section-gap min-h-screen flex flex-col">
-<!-- TopNavBar -->
-<header class="bg-background/80 backdrop-blur-md fixed top-0 w-full z-50 border-b border-border-subtle transition-all duration-200 ease-in-out">
-<div class="flex justify-between items-center h-16 px-margin-mobile md:px-gutter max-w-container-max mx-auto">
-<a class="hover:opacity-80 transition-opacity flex items-center" href="index.html" aria-label="Nathan Behailu">
-<img src="images/nathan.svg" alt="Nathan Behailu" class="h-6 w-auto brightness-0 invert">
-</a>
-<nav class="hidden md:flex gap-6 font-mono-label text-mono-label">
-<a class="text-primary transition-colors" href="index.html">Home</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors" href="experiences.html">Experience</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors" href="projects.html">Projects</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Resume</a>
-</nav>
-<button class="md:hidden text-primary">
-<span class="material-symbols-outlined">menu</span>
-</button>
-</div>
+<body>
+<div class="progress" aria-hidden="true"></div>
+<div class="glow" aria-hidden="true"></div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html">Nathan Behailu</a>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="index.html" aria-current="page">Home</a></li>
+        <li><a href="experiences.html">Experience</a></li>
+        <li><a href="projects.html">Projects</a></li>
+      </ul>
+    </nav>
+  </div>
 </header>
-<main class="flex-grow max-w-container-max mx-auto px-margin-mobile md:px-gutter w-full">
-<!-- Hero Section -->
-<section class="py-section-gap flex flex-col md:flex-row gap-8 items-start border-b border-border-subtle">
-<div class="shrink-0 flex flex-col gap-4">
-<div class="w-32 h-32 md:w-48 md:h-48 mt-3 md:mt-6 overflow-hidden border border-border-subtle rounded-DEFAULT bg-surface-container">
-<img alt="Nathan Behailu Profile" class="w-full h-full object-cover" src="images/pp.JPG">
-</div>
-<div class="flex items-center justify-center gap-4 w-32 md:w-48">
-    <a class="social-icon" href="mailto:nz2212@nyu.edu" aria-label="Email" title="Email">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"></path></svg>
-    </a>
-    <a class="social-icon" href="https://www.linkedin.com/in/nathan-behailu/" target="_blank" aria-label="LinkedIn" title="LinkedIn">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.73V1.73C24 .77 23.21 0 22.23 0z"></path></svg>
-    </a>
-    <a class="social-icon" href="https://github.com/nathanbehailuz" target="_blank" aria-label="GitHub" title="GitHub">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58v-2.23c-3.34.73-4.03-1.42-4.03-1.42-.55-1.39-1.33-1.76-1.33-1.76-1.09-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49 1 .11-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.62-5.48 5.92.43.37.82 1.1.82 2.22v3.29c0 .32.22.69.82.57C20.56 21.8 24 17.3 24 12 24 5.37 18.63 0 12 0z"></path></svg>
-    </a>
-    <a class="social-icon" href="https://www.instagram.com/nate.behailu/" target="_blank" aria-label="Instagram" title="Instagram">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.64.07-4.85.07s-3.58-.01-4.85-.07c-3.26-.15-4.77-1.7-4.92-4.92-.06-1.27-.07-1.64-.07-4.85s.01-3.58.07-4.85c.15-3.23 1.67-4.77 4.92-4.92 1.27-.06 1.65-.07 4.85-.07zM12 0C8.74 0 8.33.01 7.05.07 2.7.27.27 2.7.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.2 4.36 2.62 6.78 6.98 6.98C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c4.35-.2 6.78-2.62 6.98-6.98.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95C23.73 2.7 21.31.27 16.95.07 15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zM12 16a4 4 0 1 1 4-4 4 4 0 0 1-4 4zm6.41-10.85a1.44 1.44 0 1 0 1.44 1.44 1.44 1.44 0 0 0-1.44-1.44z"></path></svg>
-    </a>
-</div>
-</div>
-<div class="flex-1">
-<div id="intro-container" class="font-body-md text-body-md text-on-surface-variant max-w-2xl leading-relaxed space-y-4"></div>
-</div>
-</section>
-<!-- Experience Section -->
-<section class="py-section-gap border-b border-border-subtle relative" id="experience">
-<div class="border-b border-border-subtle mb-8 pb-4 flex justify-between items-end"><h2 class="font-mono-sm text-mono-sm font-medium text-on-surface-variant uppercase tracking-widest">Experience</h2><a class="font-mono-sm text-mono-sm text-on-surface-variant hover:text-primary transition-colors flex items-center gap-1" href="experiences.html">View All <span class="material-symbols-outlined text-[14px]">arrow_forward</span></a></div>
-<div class="space-y-8 pl-4 border-l border-border-subtle relative" id="experience-container">
-</div>
-</section>
 
-<script>
-// Load experiences from JSON and populate the experience section
-async function loadExperiences() {
-    try {
-        const response = await fetch('experiences.json');
-        const data = await response.json();
-        const experiences = data.experiences || [];
+<main>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <h1 data-split data-delay="250" aria-label="Nathan Behailu"><span class="l1">Nathan</span><br><span class="l2">Behailu</span></h1>
+        <p class="kicker" data-in style="--d:900">Computer Science &amp; Applied Mathematics, NYU</p>
+        <p class="tagline" data-in style="--d:1050">I build products and <em>machine learning</em> systems.</p>
+      </div>
 
-        // Filter for top_pick experiences
-        const topPickExperiences = experiences.filter(exp => exp.top_pick === true);
+      <div class="side" data-in style="--d:700">
+        <div class="portrait">
+          <div class="portrait-clip"><img src="images/pp.JPG" alt="Nathan Behailu" width="500" height="625"></div>
+        </div>
+        <div class="socials" data-in style="--d:1300">
+          <a href="mailto:nz2212@nyu.edu" aria-label="Email" title="Email">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/nathan-behailu/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.73V1.73C24 .77 23.21 0 22.23 0z"/></svg>
+          </a>
+          <a href="https://github.com/nathanbehailuz" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58v-2.23c-3.34.73-4.03-1.42-4.03-1.42-.55-1.39-1.33-1.76-1.33-1.76-1.09-.74.08-.73.08-.73 1.2.09 1.84 1.24 1.84 1.24 1.07 1.83 2.8 1.3 3.49 1 .11-.78.42-1.31.76-1.61-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 6 0c2.29-1.55 3.3-1.23 3.3-1.23.66 1.66.24 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.62-5.48 5.92.43.37.82 1.1.82 2.22v3.29c0 .32.22.69.82.57C20.56 21.8 24 17.3 24 12 24 5.37 18.63 0 12 0z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/nate.behailu/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.64.07-4.85.07s-3.58-.01-4.85-.07c-3.26-.15-4.77-1.7-4.92-4.92-.06-1.27-.07-1.64-.07-4.85s.01-3.58.07-4.85c.15-3.23 1.67-4.77 4.92-4.92 1.27-.06 1.65-.07 4.85-.07zM12 0C8.74 0 8.33.01 7.05.07 2.7.27.27 2.7.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.2 4.36 2.62 6.78 6.98 6.98C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c4.35-.2 6.78-2.62 6.98-6.98.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95C23.73 2.7 21.31.27 16.95.07 15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zM12 16a4 4 0 1 1 4-4 4 4 0 0 1-4 4zm6.41-10.85a1.44 1.44 0 1 0 1.44 1.44 1.44 1.44 0 0 0-1.44-1.44z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <span class="cue" aria-hidden="true"></span>
+  </section>
 
-        // Get container element
-        const container = document.getElementById('experience-container');
-        if (!container) return;
+  <!-- Experience -->
+  <section class="section" id="experience">
+    <div class="wrap">
+      <div class="eyebrow" data-reveal>
+        <span>Experience</span><i class="rule"></i><a href="experiences.html">All <span>&rarr;</span></a>
+      </div>
 
-        // Clear existing content
-        container.innerHTML = '';
+      <div class="timeline" data-stagger>
+        <i class="tl-line" aria-hidden="true"></i><i class="tl-fill" aria-hidden="true"></i>
 
-        // Create experience elements
-        topPickExperiences.forEach((exp, index) => {
-            // Create group div for hover effects
-            const groupDiv = document.createElement('div');
-            groupDiv.className = 'relative group experience-item';
-            groupDiv.setAttribute('data-accent', exp.titleColor || 'text-primary');
+        <a class="row" href="experiences.html" style="--accent:#4ade80" data-reveal>
+          <i class="dot" aria-hidden="true"></i>
+          <span class="main">
+            <span class="name">Builder (Software Engineer)</span>
+            <span class="sub">Caisson Ventures</span>
+          </span>
+          <span class="meta">Sep 2025 &ndash; May 2026</span>
+          <span class="arrow" aria-hidden="true">&nearr;</span>
+        </a>
 
-            // Create timeline indicator
-            const timelineDiv = document.createElement('div');
-            timelineDiv.className = 'timeline-dot absolute -left-[21px] top-1 w-[10px] h-[10px] bg-background border border-border-subtle rounded-full';
-            groupDiv.appendChild(timelineDiv);
+        <a class="row" href="experiences.html" style="--accent:#c084fc" data-reveal>
+          <i class="dot" aria-hidden="true"></i>
+          <span class="main">
+            <span class="name">Big Data Research Assistant</span>
+            <span class="sub">New York University</span>
+          </span>
+          <span class="meta">Jan 2024 &ndash; May 2026</span>
+          <span class="arrow" aria-hidden="true">&nearr;</span>
+        </a>
 
-            // Create experience content
-            const contentDiv = document.createElement('div');
-            contentDiv.className = 'flex flex-col mb-2 gap-1';
+        <a class="row" href="experiences.html" style="--accent:#60a5fa" data-reveal>
+          <i class="dot" aria-hidden="true"></i>
+          <span class="main">
+            <span class="name">Federated Learning Research Assistant</span>
+            <span class="sub">New York University, MOMA Lab</span>
+          </span>
+          <span class="meta">May 2025 &ndash; Jul 2025</span>
+          <span class="arrow" aria-hidden="true">&nearr;</span>
+        </a>
 
-            const titleRow = document.createElement('div');
-            titleRow.className = 'flex w-full justify-between items-baseline gap-4';
+        <a class="row" href="experiences.html" style="--accent:#fb923c" data-reveal>
+          <i class="dot" aria-hidden="true"></i>
+          <span class="main">
+            <span class="name">Machine Learning Research Assistant</span>
+            <span class="sub">Center for Responsible AI at NYU</span>
+          </span>
+          <span class="meta">Sep 2024 &ndash; Feb 2025</span>
+          <span class="arrow" aria-hidden="true">&nearr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
 
-            const titleH3 = document.createElement('h3');
-            titleH3.className = `font-body-md text-body-md font-semibold ${exp.titleColor || 'text-primary'}`;
-            titleH3.textContent = exp.title;
-            titleRow.appendChild(titleH3);
+  <!-- Projects -->
+  <section class="section" id="projects">
+    <div class="wrap">
+      <div class="eyebrow" data-reveal>
+        <span>Projects</span><i class="rule"></i><a href="projects.html">All <span>&rarr;</span></a>
+      </div>
 
-            const datesSpan = document.createElement('span');
-            datesSpan.className = 'font-mono-sm text-mono-sm text-on-surface-variant shrink-0 text-right';
-            datesSpan.textContent = `${exp.start_date} – ${exp.end_date || 'Present'}`;
-            titleRow.appendChild(datesSpan);
+      <div class="rows" data-stagger>
+        <a class="row row-project" href="projects.html#world-cup-predictor" style="--accent:#22d3ee" data-reveal>
+          <span class="idx">01</span>
+          <span class="main">
+            <span class="name">World Cup Predictor</span>
+            <span class="peek"><p>Predicts World Cup 2026 matches at 71.2% accuracy from 49K+ games.</p></span>
+          </span>
+          <span class="meta">ML</span>
+          <span class="arrow" aria-hidden="true">&nearr;</span>
+        </a>
 
-            const companyRow = document.createElement('div');
-            companyRow.className = 'flex w-full justify-between items-baseline gap-4';
+        <a class="row row-project" href="projects.html#autovert" style="--accent:#4ade80" data-reveal>
+          <span class="idx">02</span>
+          <span class="main">
+            <span class="name">AutoVert</span>
+            <span class="peek"><p>AI vehicle diagnostics and repair estimates from text, image, or voice.</p></span>
+          </span>
+          <span class="meta">Mobile</span>
+          <span class="arrow" aria-hidden="true">&nearr;</span>
+        </a>
 
-            const companySpan = document.createElement('span');
-            companySpan.className = 'font-mono-sm text-mono-sm text-on-surface-variant';
-            companySpan.textContent = exp.company_name;
-            companyRow.appendChild(companySpan);
+        <a class="row row-project" href="projects.html#open-signal" style="--accent:#60a5fa" data-reveal>
+          <span class="idx">03</span>
+          <span class="main">
+            <span class="name">Open Signal</span>
+            <span class="peek"><p>Flags high-conviction insider trades from SEC Form 4 filings.</p></span>
+          </span>
+          <span class="meta">Web</span>
+          <span class="arrow" aria-hidden="true">&nearr;</span>
+        </a>
 
-            if (exp.location) {
-                const locationSpan = document.createElement('span');
-                locationSpan.className = 'font-mono-sm text-mono-sm text-on-surface-variant shrink-0 text-right';
-                locationSpan.textContent = exp.location;
-                companyRow.appendChild(locationSpan);
-            }
+        <a class="row row-project" href="projects.html#ai-flappy-bird" style="--accent:#fb923c" data-reveal>
+          <span class="idx">04</span>
+          <span class="main">
+            <span class="name">AI Plays Flappy Bird</span>
+            <span class="peek"><p>A NEAT-evolved agent that teaches itself to play Flappy Bird.</p></span>
+          </span>
+          <span class="meta">ML</span>
+          <span class="arrow" aria-hidden="true">&nearr;</span>
+        </a>
+      </div>
+    </div>
+  </section>
 
-            contentDiv.appendChild(titleRow);
-            contentDiv.appendChild(companyRow);
-            groupDiv.appendChild(contentDiv);
-
-            // Description (first bullet point only)
-            if (exp.description && exp.description.length > 0) {
-                const descP = document.createElement('p');
-                descP.className = 'experience-desc font-body-md text-body-md text-on-surface-variant pl-4 border-l';
-                descP.textContent = exp.description[0]; // Only first bullet point
-                groupDiv.appendChild(descP);
-            }
-
-            // Add to container with spacing (except for first item)
-            if (index > 0) {
-                const spacer = document.createElement('div');
-                spacer.className = 'mb-8';
-                container.appendChild(spacer);
-            }
-            container.appendChild(groupDiv);
-        });
-    } catch (error) {
-        console.error('Error loading experiences:', error);
-        // Fallback to static content if JSON loading fails
-        loadFallbackExperiences();
-    }
-}
-
-// Fallback function in case JSON loading fails
-function loadFallbackExperiences() {
-    const container = document.getElementById('experience-container');
-    if (!container) return;
-
-    // Static fallback experiences (same as before but filtered)
-    const fallbackExperiences = [
-        {
-            title: 'Builder',
-            company_name: 'R&D Venture Studio',
-            start_date: 'Sept 25',
-            end_date: 'present',
-            location: '',
-            description: ['Building MVPs, collaborating on product development, and supporting early-stage spinouts.']
-        },
-        {
-            title: 'Federated Learning Researcher',
-            company_name: 'MOMA Lab',
-            start_date: 'May 2025',
-            end_date: 'Jul 2025',
-            location: '',
-            description: ['Engineered a framework for a single client to audit server fairness with 93% accuracy and quantified the fairness degradation caused by federated unlearning.']
-        },
-        {
-            title: 'Data Science Intern',
-            company_name: 'NYUAD Social Science',
-            start_date: 'Jan 2024',
-            end_date: 'May 2025',
-            location: '',
-            description: ['Built an LLM-powered data pipeline to process 2M+ records from 40k images, slashing character error rates by 70% and boosting name accuracy by 85%.']
-        },
-        {
-            title: 'Machine Learning Researcher',
-            company_name: 'Center for Responsible AI',
-            start_date: 'Sep 2024',
-            end_date: 'Feb 2025',
-            location: '',
-            description: ['Developed a novel search algorithm to find fair classification thresholds 10x faster, successfully mitigating demographic bias with only a 2% impact on model accuracy.']
-        }
-    ];
-
-    fallbackExperiences.forEach((exp, index) => {
-        if (index > 0) {
-            const spacer = document.createElement('div');
-            spacer.className = 'mb-8';
-            container.appendChild(spacer);
-        }
-
-        const groupDiv = document.createElement('div');
-        groupDiv.className = 'relative group experience-item';
-        groupDiv.setAttribute('data-accent', exp.titleColor || 'text-primary');
-
-        const timelineDiv = document.createElement('div');
-        timelineDiv.className = 'timeline-dot absolute -left-[21px] top-1 w-[10px] h-[10px] bg-background border border-border-subtle rounded-full';
-        groupDiv.appendChild(timelineDiv);
-
-        const contentDiv = document.createElement('div');
-        contentDiv.className = 'flex flex-col mb-2 gap-1';
-
-        const titleRow = document.createElement('div');
-        titleRow.className = 'flex w-full justify-between items-baseline gap-4';
-
-        const titleH3 = document.createElement('h3');
-        titleH3.className = `font-body-md text-body-md font-semibold ${exp.titleColor || 'text-primary'}`;
-        titleH3.textContent = exp.title;
-        titleRow.appendChild(titleH3);
-
-        const datesSpan = document.createElement('span');
-        datesSpan.className = 'font-mono-sm text-mono-sm text-on-surface-variant shrink-0 text-right';
-        datesSpan.textContent = `${exp.start_date} – ${exp.end_date}`;
-        titleRow.appendChild(datesSpan);
-
-        const companyRow = document.createElement('div');
-        companyRow.className = 'flex w-full justify-between items-baseline gap-4';
-
-        const companySpan = document.createElement('span');
-        companySpan.className = 'font-mono-sm text-mono-sm text-on-surface-variant';
-        companySpan.textContent = exp.company_name;
-        companyRow.appendChild(companySpan);
-
-        if (exp.location) {
-            const locationSpan = document.createElement('span');
-            locationSpan.className = 'font-mono-sm text-mono-sm text-on-surface-variant shrink-0 text-right';
-            locationSpan.textContent = exp.location;
-            companyRow.appendChild(locationSpan);
-        }
-
-        contentDiv.appendChild(titleRow);
-        contentDiv.appendChild(companyRow);
-        groupDiv.appendChild(contentDiv);
-
-        const descP = document.createElement('p');
-        descP.className = 'experience-desc font-body-md text-body-md text-on-surface-variant pl-4 border-l';
-        descP.textContent = exp.description[0];
-        groupDiv.appendChild(descP);
-
-        container.appendChild(groupDiv);
-    });
-}
-
-// Load experiences when page loads
-document.addEventListener('DOMContentLoaded', loadExperiences);
-</script>
-<!-- Projects Section -->
-<section class="py-section-gap border-b border-border-subtle" id="projects">
-<div class="border-b border-border-subtle mb-8 pb-4 flex justify-between items-end"><h2 class="font-mono-sm text-mono-sm font-medium text-on-surface-variant uppercase tracking-widest">Projects</h2><a class="font-mono-sm text-mono-sm text-on-surface-variant hover:text-primary transition-colors flex items-center gap-1" href="projects.html">View All <span class="material-symbols-outlined text-[14px]">arrow_forward</span></a></div>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="projects-container">
-</div>
-</section>
-<script>
-async function loadProjects() {
-    try {
-        const response = await fetch('projects.json');
-        const data = await response.json();
-        const projects = (data.projects || []).filter((project) => project.top_pick === true);
-
-        const container = document.getElementById('projects-container');
-        if (!container) return;
-
-        container.innerHTML = '';
-
-        projects.forEach((project) => {
-            const card = document.createElement('a');
-            card.href = `projects.html#${project.id}`;
-            card.className = 'project-preview block p-6 border border-border-subtle bg-surface-container-lowest hover:bg-surface-elevated transition-colors group';
-
-            const title = document.createElement('h3');
-            title.className = `font-body-md text-body-md font-semibold mb-3 flex items-center gap-2 transition-colors ${project.titleColor || 'text-primary'}`;
-
-            if (project.icon) {
-                const icon = document.createElement('i');
-                icon.className = `${project.icon} ${project.iconColor || ''}`;
-                title.appendChild(icon);
-            }
-
-            const name = document.createElement('span');
-            name.textContent = project.name;
-            title.appendChild(name);
-
-            const arrow = document.createElement('span');
-            arrow.className = 'material-symbols-outlined text-[16px] opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all ml-auto';
-            arrow.textContent = 'arrow_outward';
-            title.appendChild(arrow);
-
-            card.appendChild(title);
-
-            if (project.description && project.description.length > 0) {
-                const desc = document.createElement('p');
-                desc.className = 'font-body-md text-body-md text-on-surface-variant text-sm';
-                desc.textContent = project.description[0];
-                card.appendChild(desc);
-            }
-
-            container.appendChild(card);
-        });
-    } catch (error) {
-        console.error('Error loading projects:', error);
-    }
-}
-
-document.addEventListener('DOMContentLoaded', loadProjects);
-</script>
-<!-- Skills Section -->
-<section class="py-section-gap">
-<div class="border-b border-border-subtle mb-8 pb-4">
-<h2 class="font-mono-sm text-mono-sm font-medium text-on-surface-variant uppercase tracking-widest">
-    SKILLS
-</h2>
-</div>
-<div id="skills-container" class="grid grid-cols-1 md:grid-cols-2 gap-y-8 gap-x-12"></div>
-</section>
+  <!-- Skills -->
+  <section class="section" aria-label="Skills">
+    <div class="wrap">
+      <div class="eyebrow" data-reveal><span>Toolbox</span><i class="rule"></i></div>
+    </div>
+    <div class="marquee" data-reveal>
+      <div class="track">
+        <ul class="set">
+          <li>C/C++</li>
+          <li>JavaScript</li>
+          <li>Python</li>
+          <li>HTML/CSS</li>
+          <li>Dart</li>
+          <li>PyTorch</li>
+          <li>TensorFlow</li>
+          <li>Scikit-learn</li>
+          <li>Hugging Face</li>
+          <li>CUDA</li>
+          <li>Mongoose</li>
+          <li>React.js</li>
+          <li>Node.js</li>
+          <li>Express.js</li>
+          <li>Next.js</li>
+          <li>Tailwind</li>
+          <li>Shadcn</li>
+          <li>SQL</li>
+          <li>MongoDB</li>
+          <li>Firestore</li>
+          <li>Flutter</li>
+          <li>Git</li>
+          <li>VS Code</li>
+          <li>Jupyter Notebooks</li>
+          <li>Conda</li>
+        </ul>
+      </div>
+    </div>
+  </section>
 </main>
-<!-- Footer -->
-<footer class="bg-background w-full py-section-gap border-t border-border-subtle mt-auto">
-<div class="flex flex-col md:flex-row justify-between items-start md:items-end px-margin-mobile md:px-gutter max-w-container-max mx-auto gap-6 font-mono-sm text-mono-sm text-on-surface-variant">
-<div class="space-y-3">
-<img src="images/nathan_behailu.svg" alt="Nathan Behailu" class="h-5 w-auto brightness-0 invert">
-<div class="flex flex-wrap gap-4">
-<a class="hover:text-primary transition-colors" href="mailto:nz2212@nyu.edu">Email</a>
-<a class="hover:text-primary transition-colors" href="https://www.linkedin.com/in/nathan-behailu/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-<a class="hover:text-primary transition-colors" href="https://github.com/nathanbehailuz" target="_blank" rel="noopener noreferrer">GitHub</a>
-</div>
-</div>
-<div class="opacity-70">Built with HTML, Tailwind, a bit of JS, and a lot of 🤍</div>
-</div>
+
+<footer class="foot">
+  <div class="wrap">
+    <a class="big" href="mailto:nz2212@nyu.edu" data-reveal>Say <i>hello.</i></a>
+    <div class="foot-links">
+      <a href="mailto:nz2212@nyu.edu">Email</a>
+      <a href="https://www.linkedin.com/in/nathan-behailu/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://github.com/nathanbehailuz" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://www.instagram.com/nate.behailu/" target="_blank" rel="noopener noreferrer">Instagram</a>
+    </div>
+  </div>
 </footer>
 
-
-<script src="index.js"></script>
-</body></html>
+<script src="script.js"></script>
+</body>
+</html>

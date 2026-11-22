@@ -3,6 +3,7 @@
       {
         "title": "Builder (Software Engineer)",
         "company_name": "Caisson Ventures",
+        "logo": "images/caisson.png",
         "start_date": "Sep 2025",
         "end_date": "May 2026",
         "location": "Remote",
@@ -19,8 +20,9 @@
       {
         "title": "Big Data Research Assistant",
         "company_name": "New York University",
+        "logo": "images/nyu.png",
         "start_date": "Jan 2024",
-        "end_date": "May 2025",
+        "end_date": "May 2026",
         "location": "Abu Dhabi, UAE",
         "description": [
           "Built and maintained an end-to-end data pipeline converting 40,000+ scanned documents into 2M+ structured records to support downstream analysis and decision-making.",
@@ -34,6 +36,7 @@
       {
         "title": "Federated Learning Research Assistant",
         "company_name": "New York University, MOMA Lab",
+        "logo": "images/moma.png",
         "start_date": "May 2025",
         "end_date": "Jul 2025",
         "location": "Abu Dhabi, UAE",
@@ -49,6 +52,7 @@
       {
         "title": "Machine Learning Research Assistant",
         "company_name": "Center for Responsible AI at NYU",
+        "logo": "images/rai.png",
         "start_date": "Sep 2024",
         "end_date": "Feb 2025",
         "location": "NYC, USA",
@@ -64,6 +68,7 @@
       {
         "title": "Organizer",
         "company_name": "Google Developer Groups",
+        "logo": "images/gdg.png",
         "start_date": "Jul 2026",
         "end_date": "Present",
         "location": "Abu Dhabi, UAE",
@@ -79,6 +84,7 @@
       {
         "title": "Library & IT Committee Member",
         "company_name": "New York University Student Government",
+        "logo": "images/nyusg.png",
         "start_date": "Aug 2023",
         "end_date": "May 2024",
         "location": "Abu Dhabi, UAE",
@@ -94,6 +100,7 @@
       {
         "title": "Vice President",
         "company_name": "NYUAD Quantum Association",
+        "logo": "images/nyuadqa.png",
         "start_date": "Aug 2023",
         "end_date": "Jan 2024",
         "location": "Abu Dhabi, UAE",

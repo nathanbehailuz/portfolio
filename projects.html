@@ -1,67 +1,234 @@
 <!DOCTYPE html>
-<html class="dark" lang="en">
+<html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Nathan Behailu - Projects</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects - Nathan Behailu</title>
+<meta name="theme-color" content="#070709">
 <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script src="tailwind-config.js"></script>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
-<link rel="stylesheet" href="styles.css"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<script>document.documentElement.classList.add('js');</script>
 </head>
-<body class="bg-background text-primary pt-24 pb-section-gap min-h-screen flex flex-col">
-<header class="bg-background/80 backdrop-blur-md fixed top-0 w-full z-50 transition-all duration-200 ease-in-out">
-<div class="flex justify-between items-center h-16 px-margin-mobile md:px-gutter max-w-container-max mx-auto">
-<a class="hover:opacity-80 transition-opacity flex items-center" href="index.html" aria-label="Nathan Behailu">
-<img src="images/nathan.svg" alt="Nathan Behailu" class="h-6 w-auto brightness-0 invert">
-</a>
-<nav class="hidden md:flex gap-6 font-mono-label text-mono-label">
-<a class="text-on-surface-variant hover:text-primary transition-colors" href="index.html">Home</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors" href="experiences.html">Experience</a>
-<a class="text-primary transition-colors" href="projects.html">Projects</a>
-<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Resume</a>
-</nav>
-<button class="md:hidden text-primary">
-<span class="material-symbols-outlined">menu</span>
-</button>
-</div>
+<body>
+<div class="progress" aria-hidden="true"></div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html">Nathan Behailu</a>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="experiences.html">Experience</a></li>
+        <li><a href="projects.html" aria-current="page">Projects</a></li>
+      </ul>
+    </nav>
+  </div>
 </header>
 
-<main class="pb-section-gap px-margin-mobile md:px-gutter max-w-container-max mx-auto relative w-full">
-<header class="mb-8">
-<h1 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-primary mb-4">Projects</h1>
-</header>
+<main>
+  <div class="wrap page-head">
+    <h1 data-split aria-label="Projects">Projects</h1>
 
-<div class="flex flex-wrap gap-4 mb-8 font-mono-label text-mono-label">
-<button class="px-4 py-2 border border-outline-variant text-on-surface-variant hover:border-primary hover:text-primary rounded-sm transition-all filter-btn" data-filter="websites" aria-pressed="false">Websites</button>
-<button class="px-4 py-2 border border-outline-variant text-on-surface-variant hover:border-primary hover:text-primary rounded-sm transition-all filter-btn" data-filter="ml" aria-pressed="false">Machine Learning</button>
-<button class="px-4 py-2 border border-outline-variant text-on-surface-variant hover:border-primary hover:text-primary rounded-sm transition-all filter-btn" data-filter="mobile" aria-pressed="false">Mobile Apps</button>
-<button class="px-4 py-2 border border-outline-variant text-on-surface-variant hover:border-primary hover:text-primary rounded-sm transition-all filter-btn" data-filter="finance" aria-pressed="false">Finance</button>
-</div>
+    <div class="filters" role="group" aria-label="Filter projects" data-filters data-reveal>
+      <button type="button" data-filter="all" aria-pressed="true">All</button>
+      <button type="button" data-filter="web" aria-pressed="false">Web</button>
+      <button type="button" data-filter="ml" aria-pressed="false">Machine Learning</button>
+      <button type="button" data-filter="mobile" aria-pressed="false">Mobile</button>
+      <button type="button" data-filter="finance" aria-pressed="false">Finance</button>
+    </div>
+  </div>
 
-<div id="projectsGrid" class="space-y-6">
-</div>
+  <div class="wrap">
+    <div class="list proj" data-stagger>
+
+      <article class="acc" id="world-cup-predictor" data-tags="ml" style="--accent:#22d3ee" data-reveal>
+        <button class="acc-head" type="button" aria-expanded="false" aria-controls="p-world-cup-predictor">
+          <span class="idx">01</span>
+          <span class="title"><i class="pdot" aria-hidden="true"></i><span>World Cup Predictor</span></span>
+          <span class="tags">ML &middot; Sports &middot; Data</span>
+          <span class="plus" aria-hidden="true"></span>
+        </button>
+        <div class="acc-panel" id="p-world-cup-predictor" role="region">
+          <div class="acc-inner">
+            <p class="lead">Predicts World Cup 2026 matches at 71.2% accuracy from 49K+ games.</p>
+            <div class="chips">
+              <span class="chip">Python</span><span class="chip">XGBoost</span><span class="chip">Pandas</span><span class="chip">NumPy</span><span class="chip">SQLite</span><span class="chip">Scikit-learn</span>
+            </div>
+            <div class="links">
+              <a href="https://github.com/nathanbehailuz/world_cup_pred" target="_blank" rel="noopener noreferrer">Code <span>&nearr;</span></a>
+              <a href="https://world-cup-26-pred.vercel.app/" target="_blank" rel="noopener noreferrer">Try it <span>&nearr;</span></a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="acc" id="autovert" data-tags="mobile ml" style="--accent:#4ade80" data-reveal>
+        <button class="acc-head" type="button" aria-expanded="false" aria-controls="p-autovert">
+          <span class="idx">02</span>
+          <span class="title"><i class="pdot" aria-hidden="true"></i><span>AutoVert</span></span>
+          <span class="tags">Mobile &middot; ML</span>
+          <span class="plus" aria-hidden="true"></span>
+        </button>
+        <div class="acc-panel" id="p-autovert" role="region">
+          <div class="acc-inner">
+            <p class="lead">AI vehicle diagnostics and repair estimates from text, image, or voice.</p>
+            <div class="chips">
+              <span class="chip">Flutter</span><span class="chip">Firebase</span><span class="chip">OpenAI GPT-4</span><span class="chip">Gemini AI</span><span class="chip">Google Maps API</span><span class="chip">Dio</span><span class="chip">Bloc</span>
+            </div>
+            <div class="links">
+              <a href="https://github.com/nathanbehailuz/autovert" target="_blank" rel="noopener noreferrer">Code <span>&nearr;</span></a>
+              <a href="https://drive.google.com/file/d/1eC5e5ExWpBts_3Za4W-M1VKsAbIpUUDK/view" target="_blank" rel="noopener noreferrer">Demo <span>&nearr;</span></a>
+              <a href="localhost.html">Try it <span>&nearr;</span></a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="acc" id="open-signal" data-tags="web finance ml" style="--accent:#60a5fa" data-reveal>
+        <button class="acc-head" type="button" aria-expanded="false" aria-controls="p-open-signal">
+          <span class="idx">03</span>
+          <span class="title"><i class="pdot" aria-hidden="true"></i><span>Open Signal</span></span>
+          <span class="tags">Web &middot; Finance &middot; ML</span>
+          <span class="plus" aria-hidden="true"></span>
+        </button>
+        <div class="acc-panel" id="p-open-signal" role="region">
+          <div class="acc-inner">
+            <p class="lead">Flags high-conviction insider trades from SEC Form 4 filings.</p>
+            <div class="chips">
+              <span class="chip">FastAPI</span><span class="chip">LightGBM</span><span class="chip">PostgreSQL</span><span class="chip">React</span><span class="chip">TailwindCSS</span><span class="chip">Celery</span><span class="chip">Redis</span><span class="chip">SendGrid</span>
+            </div>
+            <div class="links">
+              <a href="https://github.com/nathanbehailuz/InsideX" target="_blank" rel="noopener noreferrer">Code <span>&nearr;</span></a>
+              <a href="https://open-signal-sec.vercel.app" target="_blank" rel="noopener noreferrer">Try it <span>&nearr;</span></a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="acc" id="cliquepix" data-tags="web ml" style="--accent:#f472b6" data-reveal>
+        <button class="acc-head" type="button" aria-expanded="false" aria-controls="p-cliquepix">
+          <span class="idx">04</span>
+          <span class="title"><i class="pdot" aria-hidden="true"></i><span>CliquePix</span></span>
+          <span class="tags">Web &middot; ML</span>
+          <span class="plus" aria-hidden="true"></span>
+        </button>
+        <div class="acc-panel" id="p-cliquepix" role="region">
+          <div class="acc-inner">
+            <p class="lead">Private photo sharing for close friends, with AI face search.</p>
+            <div class="chips">
+              <span class="chip">Node.js</span><span class="chip">Express</span><span class="chip">MongoDB</span><span class="chip">Mongoose</span><span class="chip">TensorFlow.js</span><span class="chip">face-api.js</span><span class="chip">Handlebars</span><span class="chip">Multer</span>
+            </div>
+            <div class="links">
+              <a href="https://github.com/nathanbehailuz/cliquepix" target="_blank" rel="noopener noreferrer">Code <span>&nearr;</span></a>
+              <a href="localhost.html">Try it <span>&nearr;</span></a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="acc" id="brain-tumor-detection" data-tags="ml web" style="--accent:#f87171" data-reveal>
+        <button class="acc-head" type="button" aria-expanded="false" aria-controls="p-brain-tumor-detection">
+          <span class="idx">05</span>
+          <span class="title"><i class="pdot" aria-hidden="true"></i><span>Brain Tumor Detection</span></span>
+          <span class="tags">ML &middot; Web</span>
+          <span class="plus" aria-hidden="true"></span>
+        </button>
+        <div class="acc-panel" id="p-brain-tumor-detection" role="region">
+          <div class="acc-inner">
+            <p class="lead">A CNN that classifies brain MRI scans at 90% accuracy.</p>
+            <div class="chips">
+              <span class="chip">TensorFlow</span><span class="chip">Keras</span><span class="chip">Flask</span><span class="chip">OpenCV</span><span class="chip">NumPy</span><span class="chip">Pandas</span><span class="chip">Bootstrap</span>
+            </div>
+            <div class="links">
+              <a href="https://github.com/nathanbehailuz/brain-tumor-detection" target="_blank" rel="noopener noreferrer">Code <span>&nearr;</span></a>
+              <a href="localhost.html">Try it <span>&nearr;</span></a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="acc" id="churn-prediction" data-tags="ml" style="--accent:#facc15" data-reveal>
+        <button class="acc-head" type="button" aria-expanded="false" aria-controls="p-churn-prediction">
+          <span class="idx">06</span>
+          <span class="title"><i class="pdot" aria-hidden="true"></i><span>Customer Churn Prediction</span></span>
+          <span class="tags">ML</span>
+          <span class="plus" aria-hidden="true"></span>
+        </button>
+        <div class="acc-panel" id="p-churn-prediction" role="region">
+          <div class="acc-inner">
+            <p class="lead">A neural network that predicts telecom churn at 79% accuracy.</p>
+            <div class="chips">
+              <span class="chip">TensorFlow</span><span class="chip">Keras</span><span class="chip">Pandas</span><span class="chip">NumPy</span><span class="chip">Matplotlib</span><span class="chip">Seaborn</span><span class="chip">Scikit-learn</span>
+            </div>
+            <div class="links">
+              <a href="https://github.com/nathanbehailuz/churn-prediction" target="_blank" rel="noopener noreferrer">Code <span>&nearr;</span></a>
+              <a href="localhost.html">Try it <span>&nearr;</span></a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="acc" id="ml-from-scratch" data-tags="ml" style="--accent:#c084fc" data-reveal>
+        <button class="acc-head" type="button" aria-expanded="false" aria-controls="p-ml-from-scratch">
+          <span class="idx">07</span>
+          <span class="title"><i class="pdot" aria-hidden="true"></i><span>ML From Scratch</span></span>
+          <span class="tags">ML</span>
+          <span class="plus" aria-hidden="true"></span>
+        </button>
+        <div class="acc-panel" id="p-ml-from-scratch" role="region">
+          <div class="acc-inner">
+            <p class="lead">Core ML algorithms, built from scratch in NumPy and PyTorch.</p>
+            <div class="chips">
+              <span class="chip">Python</span><span class="chip">NumPy</span><span class="chip">Pandas</span><span class="chip">PyTorch</span><span class="chip">Matplotlib</span><span class="chip">SciPy</span>
+            </div>
+            <div class="links">
+              <a href="https://github.com/nathanbehailuz/ml-from-scratch" target="_blank" rel="noopener noreferrer">Code <span>&nearr;</span></a>
+              <a href="localhost.html">Try it <span>&nearr;</span></a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <article class="acc" id="ai-flappy-bird" data-tags="ml" style="--accent:#fb923c" data-reveal>
+        <button class="acc-head" type="button" aria-expanded="false" aria-controls="p-ai-flappy-bird">
+          <span class="idx">08</span>
+          <span class="title"><i class="pdot" aria-hidden="true"></i><span>AI Plays Flappy Bird</span></span>
+          <span class="tags">ML</span>
+          <span class="plus" aria-hidden="true"></span>
+        </button>
+        <div class="acc-panel" id="p-ai-flappy-bird" role="region">
+          <div class="acc-inner">
+            <p class="lead">A NEAT-evolved agent that teaches itself to play Flappy Bird.</p>
+            <div class="chips">
+              <span class="chip">Python</span><span class="chip">Pygame</span><span class="chip">NEAT-Python</span><span class="chip">Matplotlib</span><span class="chip">Graphviz</span>
+            </div>
+            <div class="links">
+              <a href="https://github.com/nathanbehailuz/AI-plays-Flappy-Bird" target="_blank" rel="noopener noreferrer">Code <span>&nearr;</span></a>
+              <a href="localhost.html">Try it <span>&nearr;</span></a>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
 </main>
 
-<footer class="bg-background w-full py-section-gap border-t border-border-subtle mt-auto">
-<div class="flex flex-col md:flex-row justify-between items-start md:items-end px-margin-mobile md:px-gutter max-w-container-max mx-auto gap-6 font-mono-sm text-mono-sm text-on-surface-variant">
-<div class="space-y-3">
-<img src="images/nathan_behailu.svg" alt="Nathan Behailu" class="h-5 w-auto brightness-0 invert">
-<div class="flex flex-wrap gap-4">
-<a class="hover:text-primary transition-colors" href="mailto:nz2212@nyu.edu">Email</a>
-<a class="hover:text-primary transition-colors" href="https://www.linkedin.com/in/nathan-behailu/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-<a class="hover:text-primary transition-colors" href="https://github.com/nathanbehailuz" target="_blank" rel="noopener noreferrer">GitHub</a>
-</div>
-</div>
-<div class="opacity-70">Built with HTML, Tailwind, a bit of JS, and a lot of 🤍</div>
-</div>
+<footer class="foot">
+  <div class="wrap">
+    <a class="big" href="mailto:nz2212@nyu.edu" data-reveal>Say <i>hello.</i></a>
+    <div class="foot-links">
+      <a href="mailto:nz2212@nyu.edu">Email</a>
+      <a href="https://www.linkedin.com/in/nathan-behailu/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      <a href="https://github.com/nathanbehailuz" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://www.instagram.com/nate.behailu/" target="_blank" rel="noopener noreferrer">Instagram</a>
+    </div>
+  </div>
 </footer>
 
-<script src="projects.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
